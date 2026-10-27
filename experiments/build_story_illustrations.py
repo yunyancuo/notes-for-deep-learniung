@@ -20,7 +20,7 @@ GREEN = '#6FAE82'
 ORANGE = '#DFA25E'
 CREAM = '#FBF6EC'
 
-FONT = "'LXGW WenKai','WenKai','STKaiti','KaiTi','PingFang SC','Microsoft YaHei',sans-serif"
+FONT = "'Noto Sans SC','PingFang SC','HarmonyOS Sans SC','Microsoft YaHei',sans-serif"
 
 
 def paper():

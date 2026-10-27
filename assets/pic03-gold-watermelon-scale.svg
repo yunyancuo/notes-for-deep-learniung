@@ -1,90 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
-  <rect width="1000" height="395" rx="22" fill="#FFFBEB" stroke="#F59E0B" stroke-width="3"/>
-  <rect x="24" y="18" width="952" height="46" rx="14" fill="#FEF3C7" stroke="#FBBF24" stroke-width="2"/>
-  <text x="500" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="#92400E">第 3 页：天价金瓜大捣乱！为什么“算平均数”的小猫会被土豪金瓜骗走？</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="410" rx="22" fill="#FFFBEB" stroke="#F59E0B" stroke-width="3"/>
+  
+  <rect x="24" y="16" width="952" height="78" rx="16" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <polygon points="43,45 41,27 57,37" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="81,45 83,27 67,37" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="45,43 44,31 54,38" fill="#FDA4AF"/>
+<polygon points="79,43 80,31 70,38" fill="#FDA4AF"/>
+<circle cx="62" cy="55" r="23" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5"/>
+<circle cx="54" cy="53" r="5.2" fill="#1E293B"/>
+<circle cx="70" cy="53" r="5.2" fill="#1E293B"/>
+<circle cx="52.2" cy="51.2" r="2.0" fill="#FFFFFF"/>
+<circle cx="68.2" cy="51.2" r="2.0" fill="#FFFFFF"/>
+<path d="M 62 32 Q 68 22 74 28" fill="none" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="58,58 66,58 62,63" fill="#F43F5E"/>
+<path d="M 55 65 Q 58.5 69 62 64 Q 65.5 69 69 65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="50" y1="55" x2="38" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="74" y1="55" x2="86" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="50" y1="61" x2="38" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="74" y1="61" x2="86" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="100" y="42" font-size="14.5" font-weight="bold" fill="#92400E">团子问：“师傅，那怎么让电脑别被那种‘印刷脏墨点’或者个别离谱的异常数据带偏呢？”</text>
+  <polygon points="919,45 917,27 933,37" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="957,45 959,27 943,37" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="921,43 920,31 930,38" fill="#FDBA74"/>
+<polygon points="955,43 956,31 946,38" fill="#FDBA74"/>
+<circle cx="938" cy="55" r="23" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
+<line x1="938" y1="35" x2="938" y2="43" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
+<line x1="932" y1="37" x2="934" y2="42" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="944" y1="37" x2="942" y2="42" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="930" cy="53" r="4.2" fill="#1E293B"/>
+<circle cx="946" cy="53" r="4.2" fill="#1E293B"/>
+<circle cx="930" cy="53" r="8.5" fill="none" stroke="#78350F" stroke-width="2"/>
+<circle cx="946" cy="53" r="8.5" fill="none" stroke="#78350F" stroke-width="2"/>
+<line x1="938.5" y1="53" x2="937.5" y2="53" stroke="#78350F" stroke-width="2"/>
+<polygon points="934,58 942,58 938,63" fill="#F43F5E"/>
+<path d="M 931 65 Q 934.5 69 938 64 Q 941.5 69 945 65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="926" y1="55" x2="914" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="950" y1="55" x2="962" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="926" y1="61" x2="914" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="950" y1="61" x2="962" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="100" y="74" font-size="14.5" font-weight="bold" fill="#B45309">老橘答：“这就要选对算分尺子啦！你想想‘全班平均工资被首富拉高’和‘搬家收行李箱断舍离’这两个生活例子！”</text>
 
-  <!-- 左：算平方平均的奶牛猫被金瓜压翻 -->
-  <g transform="translate(28, 80)">
-    <rect width="460" height="292" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
-    <polygon points="40,37 38,19 53,28" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="76,37 78,19 63,28" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,34 40,23 51,29" fill="#FDA4AF"/>
-<polygon points="74,34 76,23 65,29" fill="#FDA4AF"/>
-<circle cx="58" cy="46" r="22" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5"/>
-<line x1="58" y1="27" x2="58" y2="34" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
-<line x1="51" y1="29" x2="53" y2="33" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="65" y1="29" x2="63" y2="33" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="50" cy="44" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
-<circle cx="66" cy="44" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
-<circle cx="50" cy="44" r="2.5" fill="#1E293B"/>
-<circle cx="66" cy="44" r="2.5" fill="#1E293B"/>
-<polygon points="54,48 62,48 58,53" fill="#F43F5E"/>
-<path d="M 50 55 Q 54 60 58 54 Q 62 60 66 55" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="46" y1="45" x2="35" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="45" x2="81" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="46" y1="51" x2="35" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="51" x2="81" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-    <text x="255" y="42" text-anchor="middle" font-size="16.5" font-weight="bold" fill="#991B1B">① 平方算盘喵（L2损失）：被一颗金瓜拽上天！</text>
 
-    <polygon points="210,212 250,212 230,172" fill="#64748B"/>
-    <line x1="60" y1="132" x2="400" y2="198" stroke="#475569" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="95" cy="118" r="17" fill="#22C55E" stroke="#15803D" stroke-width="2.5"/>
-    <circle cx="138" cy="126" r="17" fill="#22C55E" stroke="#15803D" stroke-width="2.5"/>
-    <circle cx="180" cy="134" r="17" fill="#22C55E" stroke="#15803D" stroke-width="2.5"/>
-    <text x="138" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">普通瓜：10元一个</text>
+  <g transform="translate(28, 110)">
+    <rect width="460" height="276" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
+    <text x="230" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#991B1B">① 例子A：全班月薪5千，转来个亿万富翁！</text>
+    <polygon points="210,196 250,196 230,158" fill="#64748B"/>
+    <line x1="60" y1="118" x2="400" y2="184" stroke="#475569" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="105" cy="108" r="15" fill="#3B82F6"/><circle cx="145" cy="116" r="15" fill="#3B82F6"/><circle cx="185" cy="124" r="15" fill="#3B82F6"/>
+    <text x="145" y="84" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1D4ED8">9个普通同学：月薪5千</text>
+    <circle cx="355" cy="138" r="32" fill="#FACC15" stroke="#CA8A04" stroke-width="3.5"/>
+    <text x="355" y="143" text-anchor="middle" font-size="13" font-weight="bold" fill="#713F12">首富1亿!</text>
 
-    <circle cx="355" cy="150" r="36" fill="#FACC15" stroke="#CA8A04" stroke-width="4"/>
-    <polygon points="330,115 342,96 355,110 368,96 380,115" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
-    <text x="355" y="156" text-anchor="middle" font-size="14" font-weight="bold" fill="#713F12">1000元!</text>
-
-    <rect x="24" y="226" width="412" height="50" rx="12" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
-    <text x="230" y="256" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B91C1C">惨剧：把 1 个金瓜和 9 个普通瓜算平均，每个普通瓜都被标成 109 元喵！</text>
+    <rect x="20" y="206" width="420" height="58" rx="10" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
+    <text x="230" y="229" text-anchor="middle" font-size="13" font-weight="bold" fill="#B91C1C">• 平方误差（L2，像算平均数）：被首富一把拉到“人均月薪一千万”！</text>
+    <text x="230" y="251" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">• 绝对值误差（L1，像排队看正中间的中位数）：中间同学还是稳稳5千！</text>
   </g>
 
-  <!-- 右：橘猫店长排队找中间 + 菱形猫爪剪废话 -->
-  <g transform="translate(512, 80)">
-    <rect width="460" height="292" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
-    <polygon points="40,37 38,19 53,28" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="76,37 78,19 63,28" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,34 40,23 51,29" fill="#FDA4AF"/>
-<polygon points="74,34 76,23 65,29" fill="#FDA4AF"/>
-<circle cx="58" cy="46" r="22" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
-<line x1="58" y1="27" x2="58" y2="34" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
-<line x1="51" y1="29" x2="53" y2="33" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="65" y1="29" x2="63" y2="33" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="50" cy="44" r="4.5" fill="#1E293B"/>
-<circle cx="66" cy="44" r="4.5" fill="#1E293B"/>
-<circle cx="48.5" cy="42.5" r="1.5" fill="#FFFFFF"/>
-<circle cx="64.5" cy="42.5" r="1.5" fill="#FFFFFF"/>
-<polygon points="54,48 62,48 58,53" fill="#F43F5E"/>
-<path d="M 50 55 Q 54 60 58 54 Q 62 60 66 55" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="46" y1="45" x2="35" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="45" x2="81" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="46" y1="51" x2="35" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="51" x2="81" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<ellipse cx="58" cy="26" rx="25" ry="7" fill="#FDE047" stroke="#CA8A04" stroke-width="2"/>
-<path d="M 44 26 Q 58 10 72 26 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
-    <text x="255" y="42" text-anchor="middle" font-size="16.5" font-weight="bold" fill="#065F46">② 中位数算盘喵（L1）与专剪废话的“菱形猫爪”</text>
+  <g transform="translate(512, 110)">
+    <rect width="460" height="276" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
+    <text x="230" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">② 例子B：搬家只有一个小行李箱，怎么扔废话线索？</text>
+    <rect x="24" y="52" width="412" height="68" rx="10" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="230" y="76" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1E40AF">囤积癖整理法（L2 岭回归 Ridge：圆球约束）</text>
+    <text x="230" y="102" text-anchor="middle" font-size="12.5" fill="#475569">啥旧玩意儿都舍不得扔！把 10 件衣服全缩成迷你小号塞进箱子，全留着小尾巴。</text>
 
-    <rect x="24" y="76" width="412" height="84" rx="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
-    <text x="230" y="98" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#047857">秘诀 A（L1 绝对误差）：按价格排队，本喵只看站在正中间的瓜！</text>
-    <circle cx="95" cy="132" r="14" fill="#22C55E"/><circle cx="150" cy="132" r="14" fill="#22C55E"/>
-    <circle cx="210" cy="132" r="18" fill="#16A34A" stroke="#DC2626" stroke-width="3"/>
-    <text x="210" y="137" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">10元</text>
-    <circle cx="270" cy="132" r="14" fill="#22C55E"/>
-    <circle cx="335" cy="132" r="18" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
-    <text x="335" y="136" text-anchor="middle" font-size="10" font-weight="bold" fill="#713F12">金瓜</text>
-    <text x="392" y="136" font-size="12" font-weight="bold" fill="#64748B">(当它空气!)</text>
-
-    <rect x="24" y="172" width="412" height="104" rx="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
-    <text x="230" y="196" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#065F46">秘诀 B（Lasso 菱形尖角）：把瞎编的废话线索一爪子全挠成 0！</text>
-    <polygon points="68,210 94,236 68,262 42,236" fill="#10B981" stroke="#047857" stroke-width="2.5"/>
-    <text x="68" y="240" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">L1菱形</text>
-    <rect x="114" y="216" width="92" height="36" rx="8" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
-    <text x="160" y="239" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">✓ 太阳光照</text>
-    <rect x="220" y="216" width="96" height="36" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
-    <text x="268" y="239" text-anchor="middle" font-size="13" font-weight="bold" fill="#DC2626">✗ 店长星座</text>
-    <rect x="328" y="216" width="92" height="36" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
-    <text x="374" y="239" text-anchor="middle" font-size="13" font-weight="bold" fill="#DC2626">✗ 货车尾号</text>
+    <rect x="24" y="132" width="412" height="128" rx="10" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <text x="230" y="156" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#065F46">断舍离整理法（L1 稀疏 Lasso：菱形尖角约束）</text>
+    <text x="230" y="180" text-anchor="middle" font-size="12.5" fill="#047857">只留 2 件天天穿的真宝贝，把剩下 8 件三年不穿的噱头衣服直接清零扔掉！</text>
+    <rect x="52" y="196" width="105" height="34" rx="8" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+    <text x="104" y="218" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#15803D">✓ 留：太阳日照</text>
+    <rect x="176" y="196" width="110" height="34" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+    <text x="231" y="218" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#DC2626">✗ 扔：老板星座=0</text>
+    <rect x="304" y="196" width="110" height="34" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+    <text x="359" y="218" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#DC2626">✗ 扔：货车尾号=0</text>
   </g>
 </svg>

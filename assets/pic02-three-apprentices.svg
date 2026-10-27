@@ -1,119 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
-  <rect width="1000" height="400" rx="22" fill="#F8FAFC" stroke="#94A3B8" stroke-width="3"/>
-  <rect x="24" y="18" width="952" height="46" rx="14" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
-  <text x="500" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="#0369A1">第 2 页：三只小猫学挑瓜（为什么死记硬背的奶牛猫反而考砸了？）</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="410" rx="22" fill="#F8FAFC" stroke="#94A3B8" stroke-width="3"/>
+  
+  <rect x="24" y="16" width="952" height="78" rx="16" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <polygon points="43,45 41,27 57,37" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="81,45 83,27 67,37" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="45,43 44,31 54,38" fill="#FDA4AF"/>
+<polygon points="79,43 80,31 70,38" fill="#FDA4AF"/>
+<circle cx="62" cy="55" r="23" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5"/>
+<circle cx="54" cy="53" r="5.2" fill="#1E293B"/>
+<circle cx="70" cy="53" r="5.2" fill="#1E293B"/>
+<circle cx="52.2" cy="51.2" r="2.0" fill="#FFFFFF"/>
+<circle cx="68.2" cy="51.2" r="2.0" fill="#FFFFFF"/>
+<path d="M 62 32 Q 68 22 74 28" fill="none" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="58,58 66,58 62,63" fill="#F43F5E"/>
+<path d="M 55 65 Q 58.5 69 62 64 Q 65.5 69 69 65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="50" y1="55" x2="38" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="74" y1="55" x2="86" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="50" y1="61" x2="38" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="74" y1="61" x2="86" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="100" y="42" font-size="14.5" font-weight="bold" fill="#92400E">团子问：“师傅，那我让电脑把过去 100 道旧题背得一字不差，明天考新题是不是就能拿满分啦？”</text>
+  <polygon points="919,45 917,27 933,37" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="957,45 959,27 943,37" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="921,43 920,31 930,38" fill="#FDBA74"/>
+<polygon points="955,43 956,31 946,38" fill="#FDBA74"/>
+<circle cx="938" cy="55" r="23" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
+<line x1="938" y1="35" x2="938" y2="43" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
+<line x1="932" y1="37" x2="934" y2="42" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="944" y1="37" x2="942" y2="42" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="930" cy="53" r="4.2" fill="#1E293B"/>
+<circle cx="946" cy="53" r="4.2" fill="#1E293B"/>
+<circle cx="930" cy="53" r="8.5" fill="none" stroke="#78350F" stroke-width="2"/>
+<circle cx="946" cy="53" r="8.5" fill="none" stroke="#78350F" stroke-width="2"/>
+<line x1="938.5" y1="53" x2="937.5" y2="53" stroke="#78350F" stroke-width="2"/>
+<polygon points="934,58 942,58 938,63" fill="#F43F5E"/>
+<path d="M 931 65 Q 934.5 69 938 64 Q 941.5 69 945 65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="926" y1="55" x2="914" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="950" y1="55" x2="962" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="926" y1="61" x2="914" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="950" y1="61" x2="962" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="100" y="74" font-size="14.5" font-weight="bold" fill="#B45309">老橘答：“千万别！你想想咱们期末考试复习：连模拟卷上的苍蝇墨点都死背下来的人，上考场最容易考砸！”</text>
 
-  <!-- 1. 蓝猫小呆 (欠拟合) -->
-  <g transform="translate(28, 80)">
-    <rect width="296" height="296" rx="18" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2.5"/>
-    <polygon points="40,38 38,18 54,29" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="80,38 82,18 66,29" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,35 41,23 52,30" fill="#FDA4AF"/>
-<polygon points="78,35 79,23 68,30" fill="#FDA4AF"/>
-<circle cx="60" cy="48" r="24" fill="#94A3B8" stroke="#334155" stroke-width="2.5"/>
-<line x1="60" y1="27" x2="60" y2="35" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
-<line x1="53" y1="29" x2="55" y2="34" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="67" y1="29" x2="65" y2="34" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="51" cy="46" r="4.5" fill="#1E293B"/>
-<circle cx="69" cy="46" r="4.5" fill="#1E293B"/>
-<circle cx="49.5" cy="44.5" r="1.5" fill="#FFFFFF"/>
-<circle cx="67.5" cy="44.5" r="1.5" fill="#FFFFFF"/>
-<polygon points="56,50 64,50 60,55" fill="#F43F5E"/>
-<path d="M 52 57 Q 56 62 60 56 Q 64 62 68 57" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="47" y1="47" x2="35" y2="44" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="73" y1="47" x2="85" y2="44" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="47" y1="53" x2="35" y2="56" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="73" y1="53" x2="85" y2="56" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-    <text x="182" y="44" text-anchor="middle" font-size="16" font-weight="bold" fill="#334155">蓝猫小呆：死抱直尺</text>
-    <text x="182" y="64" text-anchor="middle" font-size="12.5" fill="#64748B">（一根筋 / 欠拟合）</text>
 
-    <rect x="24" y="86" width="248" height="122" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
-    <circle cx="55" cy="180" r="8" fill="#22C55E"/><circle cx="95" cy="135" r="8" fill="#22C55E"/>
-    <circle cx="148" cy="108" r="8" fill="#22C55E"/><circle cx="200" cy="132" r="8" fill="#22C55E"/>
-    <circle cx="240" cy="178" r="8" fill="#22C55E"/>
-    <line x1="35" y1="162" x2="260" y2="142" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
-
-    <rect x="20" y="220" width="256" height="62" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
-    <text x="148" y="244" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#475569">“喵！我不管弯不弯，只画直线！”</text>
-    <text x="148" y="268" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#DC2626">诊断：脑筋太死板（偏差太高）</text>
+  <g transform="translate(28, 110)">
+    <rect width="296" height="276" rx="18" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2.5"/>
+    <text x="148" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#334155">① 偷懒只背“全选C”（欠拟合）</text>
+    <rect x="24" y="48" width="248" height="128" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="55" cy="150" r="8" fill="#22C55E"/><circle cx="95" cy="105" r="8" fill="#22C55E"/>
+    <circle cx="148" cy="78" r="8" fill="#22C55E"/><circle cx="200" cy="102" r="8" fill="#22C55E"/>
+    <circle cx="240" cy="148" r="8" fill="#22C55E"/>
+    <line x1="35" y1="132" x2="260" y2="112" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+    <rect x="20" y="190" width="256" height="72" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+    <text x="148" y="216" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#475569">生活例子：复习时连课本都不翻，</text>
+    <text x="148" y="238" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#475569">不管什么题都一条直线蒙到底。</text>
+    <text x="148" y="256" text-anchor="middle" font-size="13" font-weight="bold" fill="#DC2626">毛病：脑筋太死板（偏差 Bias 太高）</text>
   </g>
 
-  <!-- 2. 奶牛猫小强 (过拟合) -->
-  <g transform="translate(352, 80)">
-    <rect width="296" height="296" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
-    <polygon points="40,38 38,18 54,29" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="80,38 82,18 66,29" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,35 41,23 52,30" fill="#FDA4AF"/>
-<polygon points="78,35 79,23 68,30" fill="#FDA4AF"/>
-<circle cx="60" cy="48" r="24" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5"/>
-<line x1="60" y1="27" x2="60" y2="35" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
-<line x1="53" y1="29" x2="55" y2="34" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="67" y1="29" x2="65" y2="34" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="51" cy="46" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
-<circle cx="69" cy="46" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
-<circle cx="51" cy="46" r="2.5" fill="#1E293B"/>
-<circle cx="69" cy="46" r="2.5" fill="#1E293B"/>
-<circle cx="51" cy="46" r="9" fill="none" stroke="#0F172A" stroke-width="2"/>
-<circle cx="69" cy="46" r="9" fill="none" stroke="#0F172A" stroke-width="2"/>
-<line x1="60" y1="46" x2="60" y2="46" stroke="#0F172A" stroke-width="2"/>
-<polygon points="56,50 64,50 60,55" fill="#F43F5E"/>
-<path d="M 52 57 Q 56 62 60 56 Q 64 62 68 57" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="47" y1="47" x2="35" y2="44" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="73" y1="47" x2="85" y2="44" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="47" y1="53" x2="35" y2="56" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="73" y1="53" x2="85" y2="56" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-    <text x="182" y="44" text-anchor="middle" font-size="16" font-weight="bold" fill="#991B1B">奶牛猫小强：死背猫砂</text>
-    <text x="182" y="64" text-anchor="middle" font-size="12.5" fill="#DC2626">（死记硬背 / 过拟合）</text>
-
-    <rect x="24" y="86" width="248" height="122" rx="12" fill="#FFFFFF" stroke="#FECACA" stroke-width="2"/>
-    <circle cx="55" cy="180" r="8" fill="#22C55E"/><circle cx="95" cy="135" r="8" fill="#22C55E"/>
-    <circle cx="148" cy="108" r="8" fill="#22C55E"/>
-    <circle cx="195" cy="186" r="9" fill="#B45309"/>
-    <text x="195" y="202" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#92400E">手抖粘的猫砂噪点</text>
-    <circle cx="240" cy="178" r="8" fill="#22C55E"/>
-    <path d="M 40 195 L 55 180 L 75 95 L 95 135 L 148 108 L 172 92 L 195 186 L 220 96 L 240 178" fill="none" stroke="#EF4444" stroke-width="3.8" stroke-linejoin="round"/>
-
-    <rect x="20" y="220" width="256" height="62" rx="10" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
-    <text x="148" y="244" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B91C1C">“连瓜皮粘的猫砂我都背下来啦！”</text>
-    <text x="148" y="268" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B45309">诊断：换个瓜摊全疯掉（方差爆炸）</text>
+  <g transform="translate(352, 110)">
+    <rect width="296" height="276" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
+    <text x="148" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#991B1B">② 连试卷墨水点都死背（过拟合）</text>
+    <rect x="24" y="48" width="248" height="128" rx="12" fill="#FFFFFF" stroke="#FECACA" stroke-width="2"/>
+    <circle cx="55" cy="150" r="8" fill="#22C55E"/><circle cx="95" cy="105" r="8" fill="#22C55E"/>
+    <circle cx="148" cy="78" r="8" fill="#22C55E"/>
+    <circle cx="195" cy="156" r="9" fill="#B45309"/>
+    <text x="195" y="171" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#92400E">印刷蹭的脏墨点</text>
+    <circle cx="240" cy="148" r="8" fill="#22C55E"/>
+    <path d="M 40 165 L 55 150 L 75 65 L 95 105 L 148 78 L 172 62 L 195 156 L 220 66 L 240 148" fill="none" stroke="#EF4444" stroke-width="3.8" stroke-linejoin="round"/>
+    <rect x="20" y="190" width="256" height="72" rx="10" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
+    <text x="148" y="216" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B91C1C">生活例子：背熟“第3题有脏墨点选B”，</text>
+    <text x="148" y="238" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B91C1C">模拟卷考100分，期末换新卷全错！</text>
+    <text x="148" y="256" text-anchor="middle" font-size="13" font-weight="bold" fill="#B45309">毛病：死抠偶然噪点（方差 Var 爆炸）</text>
   </g>
 
-  <!-- 3. 橘猫店长胖虎 (恰当泛化) -->
-  <g transform="translate(676, 80)">
-    <rect width="296" height="296" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
-    <polygon points="40,40 38,20 54,31" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="80,40 82,20 66,31" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,37 41,25 52,32" fill="#FDA4AF"/>
-<polygon points="78,37 79,25 68,32" fill="#FDA4AF"/>
-<circle cx="60" cy="50" r="24" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
-<line x1="60" y1="29" x2="60" y2="37" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
-<line x1="53" y1="31" x2="55" y2="36" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="67" y1="31" x2="65" y2="36" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="51" cy="48" r="4.5" fill="#1E293B"/>
-<circle cx="69" cy="48" r="4.5" fill="#1E293B"/>
-<circle cx="49.5" cy="46.5" r="1.5" fill="#FFFFFF"/>
-<circle cx="67.5" cy="46.5" r="1.5" fill="#FFFFFF"/>
-<polygon points="56,52 64,52 60,57" fill="#F43F5E"/>
-<path d="M 52 59 Q 56 64 60 58 Q 64 64 68 59" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="47" y1="49" x2="35" y2="46" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="73" y1="49" x2="85" y2="46" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="47" y1="55" x2="35" y2="58" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="73" y1="55" x2="85" y2="58" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<ellipse cx="60" cy="28" rx="27" ry="7" fill="#FDE047" stroke="#CA8A04" stroke-width="2"/>
-<path d="M 45 28 Q 60 11 75 28 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
-    <text x="182" y="44" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">橘猫店长：顺势画彩虹</text>
-    <text x="182" y="64" text-anchor="middle" font-size="12.5" fill="#047857">（抓大放小 / 泛化极佳）</text>
-
-    <rect x="24" y="86" width="248" height="122" rx="12" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
-    <circle cx="55" cy="180" r="8" fill="#22C55E"/><circle cx="95" cy="135" r="8" fill="#22C55E"/>
-    <circle cx="148" cy="108" r="8" fill="#22C55E"/>
-    <circle cx="195" cy="186" r="7" fill="#CBD5E1"/>
-    <text x="195" y="170" text-anchor="middle" font-size="10.5" fill="#64748B">无视小猫砂</text>
-    <circle cx="240" cy="178" r="8" fill="#22C55E"/>
-    <path d="M 45 186 Q 148 45 250 184" fill="none" stroke="#16A34A" stroke-width="5" stroke-linecap="round"/>
-
-    <rect x="20" y="220" width="256" height="62" rx="10" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
-    <text x="148" y="244" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#047857">“抓大趋势、忽略小猫砂才最准喵！”</text>
-    <text x="148" y="268" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15803D">满分：去哪个瓜摊都能挑中甜瓜！</text>
+  <g transform="translate(676, 110)">
+    <rect width="296" height="276" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
+    <text x="148" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">③ 吃透解题大套路（恰当泛化）</text>
+    <rect x="24" y="48" width="248" height="128" rx="12" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+    <circle cx="55" cy="150" r="8" fill="#22C55E"/><circle cx="95" cy="105" r="8" fill="#22C55E"/>
+    <circle cx="148" cy="78" r="8" fill="#22C55E"/>
+    <circle cx="195" cy="156" r="7" fill="#CBD5E1"/>
+    <text x="195" y="140" text-anchor="middle" font-size="10.5" fill="#64748B">自动忽略脏墨点</text>
+    <circle cx="240" cy="148" r="8" fill="#22C55E"/>
+    <path d="M 45 156 Q 148 18 250 154" fill="none" stroke="#16A34A" stroke-width="5" stroke-linecap="round"/>
+    <rect x="20" y="190" width="256" height="72" rx="10" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
+    <text x="148" y="216" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#047857">生活例子：看懂题目背后的真正规律，</text>
+    <text x="148" y="238" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#047857">主动忽略印刷错字，考新题照样高分！</text>
+    <text x="148" y="256" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">黄金法则：抓大趋势、放过小杂音！</text>
   </g>
 </svg>

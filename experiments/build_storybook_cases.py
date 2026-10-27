@@ -84,17 +84,17 @@ def build_case01():
     y_deg14, _ = fit_legendre_min_norm(x_train, y_train, x_grid, 14)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('猫咪实验剧场 1：三只小猫学挑瓜（蓝猫小呆欠拟合、奶牛猫小强过拟合、橘猫店长刚刚好）', fontsize=14, fontweight='bold', y=1.03, color='#0F172A')
+    fig.suptitle('团子与老橘的实验课 1：期末复习的三种境界（只蒙C欠拟合、死背墨点过拟合、摸清套路刚刚好）', fontsize=14, fontweight='bold', y=1.03, color='#0F172A')
 
-    # 左图：三个学徒的挑瓜曲线
+    # 左图：三种复习方法的画线比赛
     ax = axes[0]
-    ax.plot(x_grid, y_true_grid, 'k--', lw=2, label='大自然真正的甜度规律')
-    ax.scatter(x_train, y_train, c='#DC2626', s=55, zorder=5, edgecolors='white', label='瓜摊 15 个西瓜 (粘了一点猫砂误差)')
-    ax.plot(x_grid, y_deg1, color='#94A3B8', lw=2.2, label='蓝猫小呆 (只画直线: 欠拟合)')
-    ax.plot(x_grid, y_deg4, color='#16A34A', lw=2.6, label='橘猫店长胖虎 (顺势画弧线: 刚刚好!)')
-    ax.plot(x_grid, np.clip(y_deg14, -2.2, 2.2), color='#2563EB', lw=1.8, alpha=0.85, label='奶牛猫小强 (死背猫砂: 过拟合抽风)')
+    ax.plot(x_grid, y_true_grid, 'k--', lw=2, label='期末出题背后的真实规律')
+    ax.scatter(x_train, y_train, c='#DC2626', s=55, zorder=5, edgecolors='white', label='15 道复习模拟题 (含印刷脏墨点噪声)')
+    ax.plot(x_grid, y_deg1, color='#94A3B8', lw=2.2, label='偷懒只蒙直线 (欠拟合: 高偏差)')
+    ax.plot(x_grid, y_deg4, color='#16A34A', lw=2.6, label='摸清解题规律 (4阶平滑: 泛化最佳!)')
+    ax.plot(x_grid, np.clip(y_deg14, -2.2, 2.2), color='#2563EB', lw=1.8, alpha=0.85, label='死背印刷墨点 (14阶过拟合: 高方差)')
     ax.set_ylim(-2.1, 2.1)
-    ax.set_title('① 三只猫咪的画线比赛 (15个瓜)', fontsize=11.5, fontweight='bold')
+    ax.set_title('① 三种复习方法在 15 道旧题上的表现', fontsize=11.5, fontweight='bold')
     ax.set_xlabel('敲声声学特征 x (归一化)')
     ax.set_ylabel('西瓜甜度偏离值 y')
     ax.legend(fontsize=8, loc='lower left')
@@ -166,11 +166,11 @@ def build_case01():
     fig.tight_layout()
     b64 = fig_to_b64_and_svg(fig, 'case01-overfitting-double-descent.svg')
     log_text = (
-        "🐾 【橘猫店长的西瓜摊成绩单 (15 个训练瓜，80 个新瓜盲测)】\n"
-        f"  1. 蓝猫小呆 (死抱直尺画直线)   -> 死板误差 = {bias2_list[0]:.4f}, 手抖误差 = {var_list[0]:.4f}, 总错分 = {total_list[0]:.4f} (脑筋太死板喵!)\n"
-        f"  2. 橘猫店长 (4阶温和彩虹弧线)  -> 死板误差 = {bias2_list[3]:.4f}, 手抖误差 = {var_list[3]:.4f}, 总错分 = {total_list[3]:.4f} (全场最准喵!)\n"
-        f"  3. 奶牛猫小强 (12阶死背猫砂)   -> 死板误差 = {bias2_list[11]:.4f}, 手抖误差 = {var_list[11]:.4f}, 总错分 = {total_list[11]:.4f} (换个摊位全猜错!)\n"
-        f"  4. 超级大模型猫 (110个脑细胞找最平缓曲线) -> 旧瓜误差 = {train_errs[-1]:.5f}, 新瓜误差居然又降回 = {test_errs[-1]:.4f}!"
+        "🐾 【老橘师傅与团子的实验成绩单 (15 道旧题复习，80 道期末新题盲测)】\n"
+        f"  1. 偷懒蒙直线 (欠拟合)        -> 偏差平方 = {bias2_list[0]:.4f}, 方差 = {var_list[0]:.4f}, 期末总错分 = {total_list[0]:.4f} (连基本规律都没看懂)\n"
+        f"  2. 摸清套路 (4阶平滑弧线)     -> 偏差平方 = {bias2_list[3]:.4f}, 方差 = {var_list[3]:.4f}, 期末总错分 = {total_list[3]:.4f} (忽略印刷墨点，全场最准!)\n"
+        f"  3. 死背印刷墨点 (12阶过拟合)  -> 偏差平方 = {bias2_list[11]:.4f}, 方差 = {var_list[11]:.4f}, 期末总错分 = {total_list[11]:.4f} (换张新卷子全傻眼!)\n"
+        f"  4. 过参数化大模型 (110个旋钮自动选最平缓曲线) -> 旧题误差 = {train_errs[-1]:.5f}, 新题误差重新降回 = {test_errs[-1]:.4f}!"
     )
     return b64, log_text
 
@@ -201,7 +201,7 @@ def build_case02():
     w_huber = minimize(huber_loss, [2.0, 2.0]).x
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('猫咪实验剧场 2：天价金瓜大捣乱（平方算盘喵被金瓜骗走 vs 中位数橘猫稳如泰山 & 菱形猫爪剪废话）',
+    fig.suptitle('团子与老橘的实验课 2：首富进班拉歪平均数（L2均方误差 vs L1中位数抗噪）与行李箱断舍离（Lasso）',
                  fontsize=13.5, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：2 个天价金瓜如何拉垮 L2 回归线
@@ -389,16 +389,16 @@ def build_case03():
     nn_zz = (1.0 / (1.0 + np.exp(-(g_a2 @ W3 + b3)))).reshape(gx.shape)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('猫咪实验剧场 3：只会切方块的暹罗猫（决策树）vs 会揉毛线团的布偶猫（神经网络）',
+    fig.suptitle('团子与老橘的实验课 3：医院分诊台一刀切（决策树阶梯格）vs 折纸剪窗花（神经网络空间折叠）',
                  fontsize=13, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：决策树正交矩形阶梯边界
     ax = axes[0]
     ax.contourf(gx, gy, tree_zz, levels=[-0.1, 0.5, 1.1], colors=['#DBEAFE', '#FEE2E2'], alpha=0.85)
     ax.contour(gx, gy, tree_zz, levels=[0.5], colors=['#1E40AF'], linewidths=2)
-    ax.scatter(X[y == 0, 0], X[y == 0, 1], c='#2563EB', s=28, edgecolors='white', lw=0.5, label='好瓜簇 (上月牙)')
-    ax.scatter(X[y == 1, 0], X[y == 1, 1], c='#DC2626', s=28, edgecolors='white', lw=0.5, label='坏瓜簇 (下月牙)')
-    ax.set_title('① 方刀暹罗猫 (决策树): 只能剁出锯齿方块楼梯', fontsize=11, fontweight='bold')
+    ax.scatter(X[y == 0, 0], X[y == 0, 1], c='#2563EB', s=28, edgecolors='white', lw=0.5, label='类别 A (上月牙)')
+    ax.scatter(X[y == 1, 0], X[y == 1, 1], c='#DC2626', s=28, edgecolors='white', lw=0.5, label='类别 B (下月牙)')
+    ax.set_title('① 医院分诊台式切法 (决策树): 只能切出锯齿楼梯格', fontsize=11, fontweight='bold')
     ax.set_xlabel('特征 x1')
     ax.set_ylabel('特征 x2')
     ax.legend(fontsize=8, loc='upper right')
@@ -407,9 +407,9 @@ def build_case03():
     ax = axes[1]
     ax.contourf(gx, gy, nn_zz, levels=[-0.1, 0.5, 1.1], colors=['#DBEAFE', '#FEE2E2'], alpha=0.85)
     ax.contour(gx, gy, nn_zz, levels=[0.5], colors=['#15803D'], linewidths=2.5)
-    ax.scatter(X[y == 0, 0], X[y == 0, 1], c='#2563EB', s=28, edgecolors='white', lw=0.5, label='好瓜簇')
-    ax.scatter(X[y == 1, 0], X[y == 1, 1], c='#DC2626', s=28, edgecolors='white', lw=0.5, label='坏瓜簇')
-    ax.set_title('② 魔法布偶猫 (神经网络): 丝滑穿过弯弯的月牙', fontsize=11, fontweight='bold')
+    ax.scatter(X[y == 0, 0], X[y == 0, 1], c='#2563EB', s=28, edgecolors='white', lw=0.5, label='类别 A')
+    ax.scatter(X[y == 1, 0], X[y == 1, 1], c='#DC2626', s=28, edgecolors='white', lw=0.5, label='类别 B')
+    ax.set_title('② 折纸剪窗花 (神经网络): 在原图上显出丝滑弯线', fontsize=11, fontweight='bold')
     ax.set_xlabel('特征 x1')
     ax.set_ylabel('特征 x2')
     ax.legend(fontsize=8, loc='upper right')
@@ -491,7 +491,7 @@ def build_case04():
     X_out = np.column_stack([r_out * np.cos(ang_out), r_out * np.sin(ang_out)])
 
     fig = plt.figure(figsize=(15, 4.4))
-    fig.suptitle('猫咪实验剧场 4：压线站岗的 3 只哨兵三花猫（SVM 支持向量）与拍蹦床的大猫爪（核函数升维）',
+    fig.suptitle('团子与老橘的实验课 4：马路中间画最宽双黄线（SVM支持向量）与颠铁锅筛花生米（核函数升维）',
                  fontsize=13.5, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：最大间隔与支持向量 (删掉非支持向量前后超平面完全重合)
@@ -617,7 +617,7 @@ def build_case05():
         gb_snapshots[m] = H_grid.copy()
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('猫咪实验剧场 5：蒙眼投票侦探猫（随机森林抹平手抖毛刺）vs 改错题画画接力猫（GBDT 补差价）',
+    fig.suptitle('团子与老橘的实验课 5：歌手大赛评委各看各的（随机森林降方差）vs 木匠师徒接力补差价（GBDT）',
                  fontsize=13, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：Bagging 削减深树方差
@@ -724,7 +724,7 @@ def build_case06():
     acc_gmm = max(np.mean(lbl_gmm == y_true), np.mean(lbl_gmm != y_true)) * 100
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('猫咪实验剧场 6：拿死板圆规的蓝猫（K-Means 切错冬瓜）vs 玩魔法橡皮筋的橘猫（EM 软聚类步步高）',
+    fig.suptitle('团子与老橘的实验课 6：操场排队画正圆翻车（K-Means）vs 顺着队形拉长橡皮筋（EM算法与GMM）',
                  fontsize=13, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：K-Means 硬聚类翻车现场

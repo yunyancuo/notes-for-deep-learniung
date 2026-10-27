@@ -1,76 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
-  <rect width="1000" height="395" rx="22" fill="#FFFBEB" stroke="#F59E0B" stroke-width="3"/>
-  <rect x="24" y="18" width="952" height="46" rx="14" fill="#FEF3C7" stroke="#FBBF24" stroke-width="2"/>
-  <text x="500" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="#92400E">第 7 页：标签被大风刮跑啦！拿死板圆规的蓝猫 vs. 玩魔法橡皮筋的橘猫</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="410" rx="22" fill="#FFFBEB" stroke="#F59E0B" stroke-width="3"/>
+  
+  <rect x="24" y="16" width="952" height="78" rx="16" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <polygon points="43,45 41,27 57,37" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="81,45 83,27 67,37" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="45,43 44,31 54,38" fill="#FDA4AF"/>
+<polygon points="79,43 80,31 70,38" fill="#FDA4AF"/>
+<circle cx="62" cy="55" r="23" fill="#FFF7ED" stroke="#9A3412" stroke-width="2.5"/>
+<circle cx="54" cy="53" r="5.2" fill="#1E293B"/>
+<circle cx="70" cy="53" r="5.2" fill="#1E293B"/>
+<circle cx="52.2" cy="51.2" r="2.0" fill="#FFFFFF"/>
+<circle cx="68.2" cy="51.2" r="2.0" fill="#FFFFFF"/>
+<path d="M 62 32 Q 68 22 74 28" fill="none" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="58,58 66,58 62,63" fill="#F43F5E"/>
+<path d="M 55 65 Q 58.5 69 62 64 Q 65.5 69 69 65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="50" y1="55" x2="38" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="74" y1="55" x2="86" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="50" y1="61" x2="38" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="74" y1="61" x2="86" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="100" y="42" font-size="14.5" font-weight="bold" fill="#92400E">团子问：“师傅，前面说的都有标准答案。要是去一个陌生地方，连名牌和标签都没有，怎么把大家自动分群呀？”</text>
+  <polygon points="919,45 917,27 933,37" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="957,45 959,27 943,37" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="921,43 920,31 930,38" fill="#FDBA74"/>
+<polygon points="955,43 956,31 946,38" fill="#FDBA74"/>
+<circle cx="938" cy="55" r="23" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
+<line x1="938" y1="35" x2="938" y2="43" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
+<line x1="932" y1="37" x2="934" y2="42" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+<line x1="944" y1="37" x2="942" y2="42" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+<circle cx="930" cy="53" r="4.2" fill="#1E293B"/>
+<circle cx="946" cy="53" r="4.2" fill="#1E293B"/>
+<circle cx="930" cy="53" r="8.5" fill="none" stroke="#78350F" stroke-width="2"/>
+<circle cx="946" cy="53" r="8.5" fill="none" stroke="#78350F" stroke-width="2"/>
+<line x1="938.5" y1="53" x2="937.5" y2="53" stroke="#78350F" stroke-width="2"/>
+<polygon points="934,58 942,58 938,63" fill="#F43F5E"/>
+<path d="M 931 65 Q 934.5 69 938 64 Q 941.5 69 945 65" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="926" y1="55" x2="914" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="950" y1="55" x2="962" y2="52" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="926" y1="61" x2="914" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="950" y1="61" x2="962" y2="64" stroke="#64748B" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="100" y="74" font-size="14.5" font-weight="bold" fill="#B45309">老橘答：“这叫无监督聚类！比如操场上两个班做广播体操没穿校服，用圆规画正圆会切错，得用能变形的橡皮筋！”</text>
 
-  <!-- 左：K-Means 死板正圆规 -->
-  <g transform="translate(28, 80)">
-    <rect width="460" height="292" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
-    <polygon points="40,37 38,19 53,28" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="76,37 78,19 63,28" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,34 40,23 51,29" fill="#FDA4AF"/>
-<polygon points="74,34 76,23 65,29" fill="#FDA4AF"/>
-<circle cx="58" cy="46" r="22" fill="#94A3B8" stroke="#334155" stroke-width="2.5"/>
-<line x1="58" y1="27" x2="58" y2="34" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
-<line x1="51" y1="29" x2="53" y2="33" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="65" y1="29" x2="63" y2="33" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="50" cy="44" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
-<circle cx="66" cy="44" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
-<circle cx="50" cy="44" r="2.5" fill="#1E293B"/>
-<circle cx="66" cy="44" r="2.5" fill="#1E293B"/>
-<polygon points="54,48 62,48 58,53" fill="#F43F5E"/>
-<path d="M 50 55 Q 54 60 58 54 Q 62 60 66 55" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="46" y1="45" x2="35" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="45" x2="81" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="46" y1="51" x2="35" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="51" x2="81" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-    <text x="255" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="#991B1B">① 圆规蓝猫（K-Means）：只会画正圆圈，把长条冬瓜切错啦！</text>
 
-    <rect x="30" y="72" width="400" height="142" rx="12" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
-    <circle cx="155" cy="142" r="58" fill="#FEE2E2" opacity="0.65" stroke="#EF4444" stroke-width="3" stroke-dasharray="6,4"/>
-    <circle cx="305" cy="142" r="58" fill="#DBEAFE" opacity="0.65" stroke="#3B82F6" stroke-width="3" stroke-dasharray="6,4"/>
-    <circle cx="110" cy="112" r="9" fill="#EF4444"/><circle cx="170" cy="112" r="9" fill="#EF4444"/><circle cx="230" cy="112" r="9" fill="#EF4444"/>
-    <circle cx="290" cy="112" r="9" fill="#3B82F6"/><circle cx="350" cy="112" r="9" fill="#3B82F6"/>
-    <circle cx="110" cy="172" r="9" fill="#EF4444"/><circle cx="170" cy="172" r="9" fill="#EF4444"/>
-    <circle cx="230" cy="172" r="9" fill="#3B82F6"/><circle cx="290" cy="172" r="9" fill="#3B82F6"/><circle cx="350" cy="172" r="9" fill="#3B82F6"/>
-    <line x1="230" y1="78" x2="230" y2="206" stroke="#DC2626" stroke-width="3"/>
+  <g transform="translate(28, 110)">
+    <rect width="460" height="276" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
+    <text x="230" y="30" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#991B1B">① K-Means 算法：像插旗画正圆，把长条体操队拦腰切错！</text>
+    <rect x="30" y="46" width="400" height="142" rx="12" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+    <circle cx="155" cy="116" r="56" fill="#FEE2E2" opacity="0.65" stroke="#EF4444" stroke-width="3" stroke-dasharray="6,4"/>
+    <circle cx="305" cy="116" r="56" fill="#DBEAFE" opacity="0.65" stroke="#3B82F6" stroke-width="3" stroke-dasharray="6,4"/>
+    <circle cx="110" cy="88" r="8" fill="#EF4444"/><circle cx="170" cy="88" r="8" fill="#EF4444"/><circle cx="230" cy="88" r="8" fill="#EF4444"/>
+    <circle cx="290" cy="88" r="8" fill="#3B82F6"/><circle cx="350" cy="88" r="8" fill="#3B82F6"/>
+    <circle cx="110" cy="144" r="8" fill="#EF4444"/><circle cx="170" cy="144" r="8" fill="#EF4444"/>
+    <circle cx="230" cy="144" r="8" fill="#3B82F6"/><circle cx="290" cy="144" r="8" fill="#3B82F6"/><circle cx="350" cy="144" r="8" fill="#3B82F6"/>
+    <line x1="230" y1="54" x2="230" y2="180" stroke="#DC2626" stroke-width="3"/>
 
-    <rect x="24" y="226" width="412" height="52" rx="12" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
-    <text x="230" y="257" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B91C1C">毛病：圆规只能画正圆，把上下两条长长的冬瓜拦腰斩成左右两半喵！</text>
+    <rect x="20" y="200" width="420" height="62" rx="10" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
+    <text x="230" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#B91C1C">生活例子：操场上明明是上下两横排长长的队伍，K-Means 只认到旗子</text>
+    <text x="230" y="246" text-anchor="middle" font-size="13" font-weight="bold" fill="#B91C1C">的直线距离（正圆圈），结果一刀把两列长队硬生生劈成了左右两半！</text>
   </g>
 
-  <!-- 右：EM 魔法橡皮筋 -->
-  <g transform="translate(512, 80)">
-    <rect width="460" height="292" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
-    <polygon points="40,37 38,19 53,28" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="76,37 78,19 63,28" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
-<polygon points="42,34 40,23 51,29" fill="#FDA4AF"/>
-<polygon points="74,34 76,23 65,29" fill="#FDA4AF"/>
-<circle cx="58" cy="46" r="22" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
-<line x1="58" y1="27" x2="58" y2="34" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
-<line x1="51" y1="29" x2="53" y2="33" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
-<line x1="65" y1="29" x2="63" y2="33" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="50" cy="44" r="4.5" fill="#1E293B"/>
-<circle cx="66" cy="44" r="4.5" fill="#1E293B"/>
-<circle cx="48.5" cy="42.5" r="1.5" fill="#FFFFFF"/>
-<circle cx="64.5" cy="42.5" r="1.5" fill="#FFFFFF"/>
-<polygon points="54,48 62,48 58,53" fill="#F43F5E"/>
-<path d="M 50 55 Q 54 60 58 54 Q 62 60 66 55" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
-<line x1="46" y1="45" x2="35" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="45" x2="81" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="46" y1="51" x2="35" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="70" y1="51" x2="81" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
-<ellipse cx="58" cy="26" rx="25" ry="7" fill="#FDE047" stroke="#CA8A04" stroke-width="2"/>
-<path d="M 44 26 Q 58 10 72 26 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
-    <text x="255" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">② 橡皮筋橘猫（EM算法）：顺着瓜堆形状把橡皮筋拉长变扁！</text>
+  <g transform="translate(512, 110)">
+    <rect width="460" height="276" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
+    <text x="230" y="30" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#065F46">② EM 算法与高斯混合：先猜人、再顺着队形拉长橡皮筋！</text>
+    <rect x="30" y="46" width="400" height="142" rx="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <ellipse cx="230" cy="88" rx="155" ry="22" fill="#DCFCE7" opacity="0.8" stroke="#16A34A" stroke-width="3.5"/>
+    <ellipse cx="230" cy="144" rx="155" ry="22" fill="#FEF3C7" opacity="0.8" stroke="#D97706" stroke-width="3.5"/>
+    <circle cx="110" cy="88" r="8" fill="#16A34A"/><circle cx="170" cy="88" r="8" fill="#16A34A"/><circle cx="230" cy="88" r="8" fill="#16A34A"/><circle cx="290" cy="88" r="8" fill="#16A34A"/><circle cx="350" cy="88" r="8" fill="#16A34A"/>
+    <circle cx="110" cy="144" r="8" fill="#D97706"/><circle cx="170" cy="144" r="8" fill="#D97706"/><circle cx="230" cy="144" r="8" fill="#D97706"/><circle cx="290" cy="144" r="8" fill="#D97706"/><circle cx="350" cy="144" r="8" fill="#D97706"/>
 
-    <rect x="30" y="72" width="400" height="142" rx="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
-    <ellipse cx="230" cy="112" rx="158" ry="24" fill="#DCFCE7" opacity="0.8" stroke="#16A34A" stroke-width="3.5"/>
-    <ellipse cx="230" cy="172" rx="158" ry="24" fill="#FEF3C7" opacity="0.8" stroke="#D97706" stroke-width="3.5"/>
-    <circle cx="110" cy="112" r="9" fill="#16A34A"/><circle cx="170" cy="112" r="9" fill="#16A34A"/><circle cx="230" cy="112" r="9" fill="#16A34A"/><circle cx="290" cy="112" r="9" fill="#16A34A"/><circle cx="350" cy="112" r="9" fill="#16A34A"/>
-    <circle cx="110" cy="172" r="9" fill="#D97706"/><circle cx="170" cy="172" r="9" fill="#D97706"/><circle cx="230" cy="172" r="9" fill="#D97706"/><circle cx="290" cy="172" r="9" fill="#D97706"/><circle cx="350" cy="172" r="9" fill="#D97706"/>
-
-    <rect x="24" y="226" width="412" height="52" rx="12" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
-    <text x="230" y="257" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#047857">聪明：第1步猜瓜归谁（E步），第2步拉长橡皮筋（M步），两排冬瓜完美分开！</text>
+    <rect x="20" y="200" width="420" height="62" rx="10" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
+    <text x="230" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#047857">生活例子：就像鸡生蛋、蛋生鸡！第1步（E步）先猜每个人归哪队；第2步</text>
+    <text x="230" y="246" text-anchor="middle" font-size="13" font-weight="bold" fill="#047857">（M步）顺着队形把橡皮筋拉成细长椭圆。来回调整几轮就完美贴合啦！</text>
   </g>
 </svg>

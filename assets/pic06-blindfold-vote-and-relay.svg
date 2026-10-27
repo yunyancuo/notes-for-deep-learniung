@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="395" rx="22" fill="#F8FAFC" stroke="#94A3B8" stroke-width="3"/>
+  <rect x="24" y="18" width="952" height="46" rx="14" fill="#DCFCE7" stroke="#4ADE80" stroke-width="2"/>
+  <text x="500" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="#166534">第 6 页：三个臭皮匠顶个诸葛亮！蒙眼投票猫（随机森林）与接力画画猫（GBDT）</text>
+
+  <!-- 左：随机森林 -->
+  <g transform="translate(28, 80)">
+    <rect width="460" height="292" rx="18" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
+    <text x="230" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">① 随机森林：每只侦探猫只看 1 个线索，大家一起举爪投票！</text>
+
+    <rect x="26" y="54" width="122" height="152" rx="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <polygon points="69,91 67,73 82,82" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="105,91 107,73 92,82" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="71,88 69,77 80,83" fill="#FDA4AF"/>
+<polygon points="103,88 105,77 94,83" fill="#FDA4AF"/>
+<circle cx="87" cy="100" r="22" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
+<line x1="87" y1="81" x2="87" y2="88" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
+<line x1="80" y1="83" x2="82" y2="87" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="94" y1="83" x2="92" y2="87" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="79" cy="98" r="4.5" fill="#1E293B"/>
+<circle cx="95" cy="98" r="4.5" fill="#1E293B"/>
+<circle cx="77.5" cy="96.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="93.5" cy="96.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="83,102 91,102 87,107" fill="#F43F5E"/>
+<path d="M 79 109 Q 83 114 87 108 Q 91 114 95 109" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="75" y1="99" x2="64" y2="96" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="99" y1="99" x2="110" y2="96" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="75" y1="105" x2="64" y2="108" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="99" y1="105" x2="110" y2="108" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="87" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#047857">花纹侦探喵</text>
+    <text x="87" y="172" text-anchor="middle" font-size="12" fill="#15803D">“只看条纹：甜!”</text>
+
+    <rect x="168" y="54" width="122" height="152" rx="12" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <polygon points="211,91 209,73 224,82" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="247,91 249,73 234,82" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="213,88 211,77 222,83" fill="#FDA4AF"/>
+<polygon points="245,88 247,77 236,83" fill="#FDA4AF"/>
+<circle cx="229" cy="100" r="22" fill="#94A3B8" stroke="#334155" stroke-width="2.5"/>
+<line x1="229" y1="81" x2="229" y2="88" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+<line x1="222" y1="83" x2="224" y2="87" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="236" y1="83" x2="234" y2="87" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="221" cy="98" r="4.5" fill="#1E293B"/>
+<circle cx="237" cy="98" r="4.5" fill="#1E293B"/>
+<circle cx="219.5" cy="96.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="235.5" cy="96.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="225,102 233,102 229,107" fill="#F43F5E"/>
+<path d="M 221 109 Q 225 114 229 108 Q 233 114 237 109" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="217" y1="99" x2="206" y2="96" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="241" y1="99" x2="252" y2="96" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="217" y1="105" x2="206" y2="108" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="241" y1="105" x2="252" y2="108" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="229" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#047857">听声侦探喵</text>
+    <text x="229" y="172" text-anchor="middle" font-size="12" fill="#15803D">“只听声音：甜!”</text>
+
+    <rect x="310" y="54" width="122" height="152" rx="12" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+    <polygon points="353,91 351,73 366,82" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="389,91 391,73 376,82" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="355,88 353,77 364,83" fill="#FDA4AF"/>
+<polygon points="387,88 389,77 378,83" fill="#FDA4AF"/>
+<circle cx="371" cy="100" r="22" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5"/>
+<line x1="371" y1="81" x2="371" y2="88" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+<line x1="364" y1="83" x2="366" y2="87" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="378" y1="83" x2="376" y2="87" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="363" cy="98" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<circle cx="379" cy="98" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<circle cx="363" cy="98" r="2.5" fill="#1E293B"/>
+<circle cx="379" cy="98" r="2.5" fill="#1E293B"/>
+<circle cx="363" cy="98" r="9" fill="none" stroke="#0F172A" stroke-width="2"/>
+<circle cx="379" cy="98" r="9" fill="none" stroke="#0F172A" stroke-width="2"/>
+<line x1="372" y1="98" x2="370" y2="98" stroke="#0F172A" stroke-width="2"/>
+<polygon points="367,102 375,102 371,107" fill="#F43F5E"/>
+<path d="M 363 109 Q 367 114 371 108 Q 375 114 379 109" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="359" y1="99" x2="348" y2="96" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="383" y1="99" x2="394" y2="96" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="359" y1="105" x2="348" y2="108" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="383" y1="105" x2="394" y2="108" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="371" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#B91C1C">尾巴侦探喵</text>
+    <text x="371" y="172" text-anchor="middle" font-size="12" fill="#DC2626">“我看走眼：不甜”</text>
+
+    <rect x="24" y="222" width="412" height="54" rx="12" fill="#FFFFFF" stroke="#34D399" stroke-width="2"/>
+    <text x="230" y="254" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#065F46">投票结果：2 票甜 vs 1 票不甜 = 甜瓜！就算 1 只猫看走眼也不怕喵！</text>
+  </g>
+
+  <!-- 右：GBDT 错题接力赛 -->
+  <g transform="translate(512, 80)">
+    <rect width="460" height="292" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
+    <text x="230" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#991B1B">② GBDT 接力画画猫：后面的猫咪专门替前面的猫“补差价”！</text>
+
+    <rect x="24" y="54" width="120" height="152" rx="12" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+    <polygon points="67,87 65,71 79,80" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="101,87 103,71 89,80" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="69,85 68,75 77,81" fill="#FDA4AF"/>
+<polygon points="99,85 100,75 91,81" fill="#FDA4AF"/>
+<circle cx="84" cy="96" r="20" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
+<line x1="84" y1="79" x2="84" y2="85" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
+<line x1="77" y1="81" x2="79" y2="84" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="91" y1="81" x2="89" y2="84" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="77" cy="94" r="4.5" fill="#1E293B"/>
+<circle cx="91" cy="94" r="4.5" fill="#1E293B"/>
+<circle cx="75.5" cy="92.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="89.5" cy="92.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="80,98 88,98 84,103" fill="#F43F5E"/>
+<path d="M 76 105 Q 80 110 84 104 Q 88 110 92 105" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="73" y1="95" x2="63" y2="92" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="95" y1="95" x2="105" y2="92" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="73" y1="101" x2="63" y2="104" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="95" y1="101" x2="105" y2="104" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="84" y="142" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#991B1B">第 1 棒：画绿圆</text>
+    <text x="84" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#DC2626">先猜 6 分甜</text>
+    <text x="84" y="186" text-anchor="middle" font-size="11.5" fill="#64748B">(还差 +4 分!)</text>
+
+    <text x="156" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#DC2626">+</text>
+
+    <rect x="168" y="54" width="120" height="152" rx="12" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+    <polygon points="211,87 209,71 223,80" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="245,87 247,71 233,80" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="213,85 212,75 221,81" fill="#FDA4AF"/>
+<polygon points="243,85 244,75 235,81" fill="#FDA4AF"/>
+<circle cx="228" cy="96" r="20" fill="#94A3B8" stroke="#334155" stroke-width="2.5"/>
+<line x1="228" y1="79" x2="228" y2="85" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+<line x1="221" y1="81" x2="223" y2="84" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="235" y1="81" x2="233" y2="84" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="221" cy="94" r="4.5" fill="#1E293B"/>
+<circle cx="235" cy="94" r="4.5" fill="#1E293B"/>
+<circle cx="219.5" cy="92.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="233.5" cy="92.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="224,98 232,98 228,103" fill="#F43F5E"/>
+<path d="M 220 105 Q 224 110 228 104 Q 232 110 236 105" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="217" y1="95" x2="207" y2="92" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="239" y1="95" x2="249" y2="92" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="217" y1="101" x2="207" y2="104" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="239" y1="101" x2="249" y2="104" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="228" y="142" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#991B1B">第 2 棒：添条纹</text>
+    <text x="228" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#EA580C">专补 +3 分</text>
+    <text x="228" y="186" text-anchor="middle" font-size="11.5" fill="#64748B">(还差 +1 分!)</text>
+
+    <text x="300" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#DC2626">+</text>
+
+    <rect x="312" y="54" width="124" height="152" rx="12" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2.5"/>
+    <polygon points="357,87 355,71 369,80" fill="#FACC15" stroke="#CA8A04" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="391,87 393,71 379,80" fill="#FACC15" stroke="#CA8A04" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="359,85 358,75 367,81" fill="#FDA4AF"/>
+<polygon points="389,85 390,75 381,81" fill="#FDA4AF"/>
+<circle cx="374" cy="96" r="20" fill="#FACC15" stroke="#CA8A04" stroke-width="2.5"/>
+<line x1="374" y1="79" x2="374" y2="85" stroke="#CA8A04" stroke-width="3" stroke-linecap="round"/>
+<line x1="367" y1="81" x2="369" y2="84" stroke="#CA8A04" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="381" y1="81" x2="379" y2="84" stroke="#CA8A04" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="367" cy="94" r="4.5" fill="#1E293B"/>
+<circle cx="381" cy="94" r="4.5" fill="#1E293B"/>
+<circle cx="365.5" cy="92.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="379.5" cy="92.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="370,98 378,98 374,103" fill="#F43F5E"/>
+<path d="M 366 105 Q 370 110 374 104 Q 378 110 382 105" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="363" y1="95" x2="353" y2="92" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="385" y1="95" x2="395" y2="92" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="363" y1="101" x2="353" y2="104" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="385" y1="101" x2="395" y2="104" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<ellipse cx="374" cy="78" rx="23" ry="7" fill="#FDE047" stroke="#CA8A04" stroke-width="2"/>
+<path d="M 361 78 Q 374 63 387 78 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
+    <text x="374" y="142" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#15803D">第 3 棒：画小尾</text>
+    <text x="374" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#16A34A">补完 +1 分</text>
+    <text x="374" y="186" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803D">合体 = 10 分!</text>
+
+    <rect x="24" y="222" width="412" height="54" rx="12" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
+    <text x="230" y="254" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#991B1B">秘诀：6分 + 3分 + 1分 = 10分！每只猫只盯住上一棒剩下的错题改喵！</text>
+  </g>
+</svg>

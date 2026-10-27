@@ -84,17 +84,17 @@ def build_case01():
     y_deg14, _ = fit_legendre_min_norm(x_train, y_train, x_grid, 14)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('实验案例 1：夏日瓜摊挑瓜记（从欠拟合、过拟合到现代过参数化双下降曲线）', fontsize=14, fontweight='bold', y=1.03, color='#0F172A')
+    fig.suptitle('猫咪实验剧场 1：三只小猫学挑瓜（蓝猫小呆欠拟合、奶牛猫小强过拟合、橘猫店长刚刚好）', fontsize=14, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：三个学徒的挑瓜曲线
     ax = axes[0]
-    ax.plot(x_grid, y_true_grid, 'k--', lw=2, label='天道真实甜度规律 f*(x)')
-    ax.scatter(x_train, y_train, c='#DC2626', s=55, zorder=5, edgecolors='white', label='瓜摊 15 个实测西瓜 (含手抖噪声)')
-    ax.plot(x_grid, y_deg1, color='#94A3B8', lw=2.2, label='学徒阿呆 (1阶直线: 欠拟合/高偏差)')
-    ax.plot(x_grid, y_deg4, color='#16A34A', lw=2.6, label='老瓜农 (4阶曲线: 恰当容量)')
-    ax.plot(x_grid, np.clip(y_deg14, -2.2, 2.2), color='#2563EB', lw=1.8, alpha=0.85, label='书呆子阿强 (14阶死记硬背: 过拟合)')
+    ax.plot(x_grid, y_true_grid, 'k--', lw=2, label='大自然真正的甜度规律')
+    ax.scatter(x_train, y_train, c='#DC2626', s=55, zorder=5, edgecolors='white', label='瓜摊 15 个西瓜 (粘了一点猫砂误差)')
+    ax.plot(x_grid, y_deg1, color='#94A3B8', lw=2.2, label='蓝猫小呆 (只画直线: 欠拟合)')
+    ax.plot(x_grid, y_deg4, color='#16A34A', lw=2.6, label='橘猫店长胖虎 (顺势画弧线: 刚刚好!)')
+    ax.plot(x_grid, np.clip(y_deg14, -2.2, 2.2), color='#2563EB', lw=1.8, alpha=0.85, label='奶牛猫小强 (死背猫砂: 过拟合抽风)')
     ax.set_ylim(-2.1, 2.1)
-    ax.set_title('① 三个挑瓜学徒的拟合现场 (N=15)', fontsize=11.5, fontweight='bold')
+    ax.set_title('① 三只猫咪的画线比赛 (15个瓜)', fontsize=11.5, fontweight='bold')
     ax.set_xlabel('敲声声学特征 x (归一化)')
     ax.set_ylabel('西瓜甜度偏离值 y')
     ax.legend(fontsize=8, loc='lower left')
@@ -166,11 +166,11 @@ def build_case01():
     fig.tight_layout()
     b64 = fig_to_b64_and_svg(fig, 'case01-overfitting-double-descent.svg')
     log_text = (
-        "【瓜摊实测成绩单 (N=15 个训练瓜，80 个新瓜测试)】\n"
-        f"  1. 学徒阿呆 (1阶直线)    -> Bias² = {bias2_list[0]:.4f}, Var = {var_list[0]:.4f}, 总测试误差 = {total_list[0]:.4f} (欠拟合)\n"
-        f"  2. 老瓜农   (4阶多项式)  -> Bias² = {bias2_list[3]:.4f}, Var = {var_list[3]:.4f}, 总测试误差 = {total_list[3]:.4f} (经典最优甜点)\n"
-        f"  3. 书呆子   (12阶多项式) -> Bias² = {bias2_list[11]:.4f}, Var = {var_list[11]:.4f}, 总测试误差 = {total_list[11]:.4f} (方差爆炸)\n"
-        f"  4. 过参数化最小范数解 (P=110 >> N=15) -> 训练误差 = {train_errs[-1]:.5f}, 测试误差回落至 = {test_errs[-1]:.4f}!"
+        "🐾 【橘猫店长的西瓜摊成绩单 (15 个训练瓜，80 个新瓜盲测)】\n"
+        f"  1. 蓝猫小呆 (死抱直尺画直线)   -> 死板误差 = {bias2_list[0]:.4f}, 手抖误差 = {var_list[0]:.4f}, 总错分 = {total_list[0]:.4f} (脑筋太死板喵!)\n"
+        f"  2. 橘猫店长 (4阶温和彩虹弧线)  -> 死板误差 = {bias2_list[3]:.4f}, 手抖误差 = {var_list[3]:.4f}, 总错分 = {total_list[3]:.4f} (全场最准喵!)\n"
+        f"  3. 奶牛猫小强 (12阶死背猫砂)   -> 死板误差 = {bias2_list[11]:.4f}, 手抖误差 = {var_list[11]:.4f}, 总错分 = {total_list[11]:.4f} (换个摊位全猜错!)\n"
+        f"  4. 超级大模型猫 (110个脑细胞找最平缓曲线) -> 旧瓜误差 = {train_errs[-1]:.5f}, 新瓜误差居然又降回 = {test_errs[-1]:.4f}!"
     )
     return b64, log_text
 
@@ -201,7 +201,7 @@ def build_case02():
     w_huber = minimize(huber_loss, [2.0, 2.0]).x
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('实验案例 2：天价金瓜搅局记（呼应《线性神经网络.ipynb》：高斯 L2、拉普拉斯 L1 次梯度与 Lasso 菱形稀疏）',
+    fig.suptitle('猫咪实验剧场 2：天价金瓜大捣乱（平方算盘喵被金瓜骗走 vs 中位数橘猫稳如泰山 & 菱形猫爪剪废话）',
                  fontsize=13.5, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：2 个天价金瓜如何拉垮 L2 回归线
@@ -389,7 +389,7 @@ def build_case03():
     nn_zz = (1.0 / (1.0 + np.exp(-(g_a2 @ W3 + b3)))).reshape(gx.shape)
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('实验案例 3：切豆腐刀客 vs 揉面团魔术师（《西瓜书》第 4 章决策树正交阶梯切分 vs 第 5 章神经网络流形展开）',
+    fig.suptitle('猫咪实验剧场 3：只会切方块的暹罗猫（决策树）vs 会揉毛线团的布偶猫（神经网络）',
                  fontsize=13, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：决策树正交矩形阶梯边界
@@ -398,7 +398,7 @@ def build_case03():
     ax.contour(gx, gy, tree_zz, levels=[0.5], colors=['#1E40AF'], linewidths=2)
     ax.scatter(X[y == 0, 0], X[y == 0, 1], c='#2563EB', s=28, edgecolors='white', lw=0.5, label='好瓜簇 (上月牙)')
     ax.scatter(X[y == 1, 0], X[y == 1, 1], c='#DC2626', s=28, edgecolors='white', lw=0.5, label='坏瓜簇 (下月牙)')
-    ax.set_title('① 切豆腐刀客 (CART树): 只能切横平竖直的锯齿阶梯', fontsize=11, fontweight='bold')
+    ax.set_title('① 方刀暹罗猫 (决策树): 只能剁出锯齿方块楼梯', fontsize=11, fontweight='bold')
     ax.set_xlabel('特征 x1')
     ax.set_ylabel('特征 x2')
     ax.legend(fontsize=8, loc='upper right')
@@ -409,7 +409,7 @@ def build_case03():
     ax.contour(gx, gy, nn_zz, levels=[0.5], colors=['#15803D'], linewidths=2.5)
     ax.scatter(X[y == 0, 0], X[y == 0, 1], c='#2563EB', s=28, edgecolors='white', lw=0.5, label='好瓜簇')
     ax.scatter(X[y == 1, 0], X[y == 1, 1], c='#DC2626', s=28, edgecolors='white', lw=0.5, label='坏瓜簇')
-    ax.set_title('② 揉面团魔术师 (ReLU网络): 丝滑贴合弯曲流形', fontsize=11, fontweight='bold')
+    ax.set_title('② 魔法布偶猫 (神经网络): 丝滑穿过弯弯的月牙', fontsize=11, fontweight='bold')
     ax.set_xlabel('特征 x1')
     ax.set_ylabel('特征 x2')
     ax.legend(fontsize=8, loc='upper right')
@@ -491,7 +491,7 @@ def build_case04():
     X_out = np.column_stack([r_out * np.cos(ang_out), r_out * np.sin(ang_out)])
 
     fig = plt.figure(figsize=(15, 4.4))
-    fig.suptitle('实验案例 4：撑起楚河汉界的少数派（《西瓜书》第 6 章 SVM：KKT 稀疏支持向量验证与三维核升维）',
+    fig.suptitle('猫咪实验剧场 4：压线站岗的 3 只哨兵三花猫（SVM 支持向量）与拍蹦床的大猫爪（核函数升维）',
                  fontsize=13.5, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：最大间隔与支持向量 (删掉非支持向量前后超平面完全重合)
@@ -617,7 +617,7 @@ def build_case05():
         gb_snapshots[m] = H_grid.copy()
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('实验案例 5：三个臭皮匠的数学秘密（《西瓜书》第 8 章：Bagging 削减方差毛刺 vs GBDT 残差错题本接力）',
+    fig.suptitle('猫咪实验剧场 5：蒙眼投票侦探猫（随机森林抹平手抖毛刺）vs 改错题画画接力猫（GBDT 补差价）',
                  fontsize=13, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：Bagging 削减深树方差
@@ -724,7 +724,7 @@ def build_case06():
     acc_gmm = max(np.mean(lbl_gmm == y_true), np.mean(lbl_gmm != y_true)) * 100
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.4))
-    fig.suptitle('实验案例 6：盲人摸象与搭桥攀岩（《西瓜书》第 7/9 章：K-Means 球盲翻车 vs EM-GMM 软聚类与 ELBO 单调攀升）',
+    fig.suptitle('猫咪实验剧场 6：拿死板圆规的蓝猫（K-Means 切错冬瓜）vs 玩魔法橡皮筋的橘猫（EM 软聚类步步高）',
                  fontsize=13, fontweight='bold', y=1.03, color='#0F172A')
 
     # 左图：K-Means 硬聚类翻车现场

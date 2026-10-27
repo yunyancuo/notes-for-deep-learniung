@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="395" rx="22" fill="#F8FAFC" stroke="#94A3B8" stroke-width="3"/>
+  <rect x="24" y="18" width="952" height="46" rx="14" fill="#F3E8FF" stroke="#C084FC" stroke-width="2"/>
+  <text x="500" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="#6B21A8">第 4 页：只会切方块的暹罗猫（决策树）vs. 会揉毛线团的布偶猫（神经网络）</text>
+
+  <!-- 左：暹罗猫方刀切豆腐 -->
+  <g transform="translate(28, 80)">
+    <rect width="460" height="292" rx="18" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2.5"/>
+    <polygon points="40,37 38,19 53,28" fill="#D6D3D1" stroke="#44403C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="76,37 78,19 63,28" fill="#D6D3D1" stroke="#44403C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="42,34 40,23 51,29" fill="#FDA4AF"/>
+<polygon points="74,34 76,23 65,29" fill="#FDA4AF"/>
+<circle cx="58" cy="46" r="22" fill="#D6D3D1" stroke="#44403C" stroke-width="2.5"/>
+<line x1="58" y1="27" x2="58" y2="34" stroke="#44403C" stroke-width="3" stroke-linecap="round"/>
+<line x1="51" y1="29" x2="53" y2="33" stroke="#44403C" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="65" y1="29" x2="63" y2="33" stroke="#44403C" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="50" cy="44" r="4.5" fill="#1E293B"/>
+<circle cx="66" cy="44" r="4.5" fill="#1E293B"/>
+<circle cx="48.5" cy="42.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="64.5" cy="42.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="54,48 62,48 58,53" fill="#F43F5E"/>
+<path d="M 50 55 Q 54 60 58 54 Q 62 60 66 55" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="46" y1="45" x2="35" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="70" y1="45" x2="81" y2="42" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="46" y1="51" x2="35" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="70" y1="51" x2="81" y2="54" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="255" y="42" text-anchor="middle" font-size="16.5" font-weight="bold" fill="#1E3A8A">① 方刀暹罗猫（决策树）：刀子只能横着切、竖着切！</text>
+
+    <rect x="34" y="76" width="392" height="142" rx="12" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <path d="M 80 202 L 80 165 L 160 165 L 160 128 L 250 128 L 250 92 L 360 92" fill="none" stroke="#2563EB" stroke-width="4" stroke-dasharray="6,3"/>
+    <circle cx="95" cy="112" r="11" fill="#3B82F6"/><circle cx="145" cy="98" r="11" fill="#3B82F6"/><circle cx="195" cy="96" r="11" fill="#3B82F6"/>
+    <circle cx="135" cy="186" r="11" fill="#EF4444"/><circle cx="215" cy="158" r="11" fill="#EF4444"/><circle cx="305" cy="130" r="11" fill="#EF4444"/>
+    <text x="322" y="188" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1D4ED8">切出一堆锯齿楼梯喵！</text>
+
+    <rect x="24" y="230" width="412" height="48" rx="12" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <text x="230" y="259" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1E40AF">“我的菜刀焊死在桌边啦！遇到弯弯的月牙，只能剁成锯齿方块喵！”</text>
+  </g>
+
+  <!-- 右：布偶猫魔法师揉面团 -->
+  <g transform="translate(512, 80)">
+    <rect width="460" height="292" rx="18" fill="#FAF5FF" stroke="#D8B4FE" stroke-width="2.5"/>
+    <polygon points="40,43 38,25 53,34" fill="#F8FAFC" stroke="#6B21A8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="76,43 78,25 63,34" fill="#F8FAFC" stroke="#6B21A8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="42,40 40,29 51,35" fill="#FDA4AF"/>
+<polygon points="74,40 76,29 65,35" fill="#FDA4AF"/>
+<circle cx="58" cy="52" r="22" fill="#F8FAFC" stroke="#6B21A8" stroke-width="2.5"/>
+<line x1="58" y1="33" x2="58" y2="40" stroke="#6B21A8" stroke-width="3" stroke-linecap="round"/>
+<line x1="51" y1="35" x2="53" y2="39" stroke="#6B21A8" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="65" y1="35" x2="63" y2="39" stroke="#6B21A8" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="50" cy="50" r="4.5" fill="#1E293B"/>
+<circle cx="66" cy="50" r="4.5" fill="#1E293B"/>
+<circle cx="48.5" cy="48.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="64.5" cy="48.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="54,54 62,54 58,59" fill="#F43F5E"/>
+<path d="M 50 61 Q 54 66 58 60 Q 62 66 66 61" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="46" y1="51" x2="35" y2="48" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="70" y1="51" x2="81" y2="48" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="46" y1="57" x2="35" y2="60" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="70" y1="57" x2="81" y2="60" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<polygon points="39,34 77,34 58,8" fill="#7E22CE" stroke="#581C87" stroke-width="2"/>
+    <text x="255" y="42" text-anchor="middle" font-size="16.5" font-weight="bold" fill="#6B21A8">② 魔法布偶猫（神经网络）：先把麻花拉开揉直！</text>
+
+    <rect x="26" y="76" width="166" height="142" rx="12" fill="#FFFFFF" stroke="#D8B4FE" stroke-width="2"/>
+    <text x="109" y="98" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#7E22CE">揉面之前：拧成麻花</text>
+    <path d="M 55 150 Q 109 100 162 150" fill="none" stroke="#3B82F6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 55 165 Q 109 212 162 165" fill="none" stroke="#EF4444" stroke-width="9" stroke-linecap="round"/>
+
+    <text x="230" y="138" text-anchor="middle" font-size="13" font-weight="bold" fill="#9333EA">猫爪揉面</text>
+    <text x="230" y="158" text-anchor="middle" font-size="22" font-weight="bold" fill="#9333EA">➔</text>
+    <text x="230" y="176" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#9333EA">(隐藏层)</text>
+
+    <rect x="268" y="76" width="166" height="142" rx="12" fill="#FFFFFF" stroke="#D8B4FE" stroke-width="2"/>
+    <text x="351" y="98" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#15803D">揉面之后：一爪两断！</text>
+    <circle cx="305" cy="126" r="10" fill="#3B82F6"/><circle cx="305" cy="156" r="10" fill="#3B82F6"/><circle cx="305" cy="186" r="10" fill="#3B82F6"/>
+    <line x1="351" y1="108" x2="351" y2="204" stroke="#16A34A" stroke-width="4" stroke-dasharray="5,3"/>
+    <circle cx="395" cy="126" r="10" fill="#EF4444"/><circle cx="395" cy="156" r="10" fill="#EF4444"/><circle cx="395" cy="186" r="10" fill="#EF4444"/>
+
+    <rect x="24" y="230" width="412" height="48" rx="12" fill="#FFFFFF" stroke="#C084FC" stroke-width="2"/>
+    <text x="230" y="259" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#6B21A8">“本喵先把纠缠在一起的月牙拉开排成两列，最后轻轻一划就分开啦！”</text>
+  </g>
+</svg>

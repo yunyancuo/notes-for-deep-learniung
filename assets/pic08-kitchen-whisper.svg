@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="395" rx="22" fill="#F8FAFC" stroke="#94A3B8" stroke-width="3"/>
+  <rect x="24" y="18" width="952" height="46" rx="14" fill="#FEE2E2" stroke="#F87171" stroke-width="2"/>
+  <text x="500" y="48" text-anchor="middle" font-size="20" font-weight="bold" fill="#991B1B">第 8 页：西瓜蛋糕做咸啦！猫咪厨房怎么靠“倒着喊一嗓子”抓出闯祸猫？（反向传播）</text>
+
+  <!-- 上半部分：正向做蛋糕流水线 -->
+  <g transform="translate(32, 78)">
+    <rect width="936" height="128" rx="16" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2.5"/>
+    <text x="468" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">👉 第一趟（正向做蛋糕）：四只小猫排成流水线做西瓜蛋糕</text>
+
+    <rect x="28" y="38" width="178" height="76" rx="12" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <polygon points="47,69 45,53 59,62" fill="#D6D3D1" stroke="#44403C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="81,69 83,53 69,62" fill="#D6D3D1" stroke="#44403C" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="49,67 48,57 57,63" fill="#FDA4AF"/>
+<polygon points="79,67 80,57 71,63" fill="#FDA4AF"/>
+<circle cx="64" cy="78" r="20" fill="#D6D3D1" stroke="#44403C" stroke-width="2.5"/>
+<line x1="64" y1="61" x2="64" y2="67" stroke="#44403C" stroke-width="3" stroke-linecap="round"/>
+<line x1="57" y1="63" x2="59" y2="66" stroke="#44403C" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="71" y1="63" x2="69" y2="66" stroke="#44403C" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="57" cy="76" r="4.5" fill="#1E293B"/>
+<circle cx="71" cy="76" r="4.5" fill="#1E293B"/>
+<circle cx="55.5" cy="74.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="69.5" cy="74.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="60,80 68,80 64,85" fill="#F43F5E"/>
+<path d="M 56 87 Q 60 92 64 86 Q 68 92 72 87" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="53" y1="77" x2="43" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="75" y1="77" x2="85" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="53" y1="83" x2="43" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="75" y1="83" x2="85" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="52" y="49" width="24" height="10" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+    <text x="142" y="72" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1E293B">① 揉面喵</text>
+    <text x="142" y="94" text-anchor="middle" font-size="11.5" fill="#047857">面粉刚刚好</text>
+
+    <text x="228" y="82" text-anchor="middle" font-size="22" font-weight="bold" fill="#3B82F6">➔</text>
+
+    <rect x="252" y="38" width="196" height="76" rx="12" fill="#FEF2F2" stroke="#EF4444" stroke-width="3"/>
+    <polygon points="273,69 271,53 285,62" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="307,69 309,53 295,62" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="275,67 274,57 283,63" fill="#FDA4AF"/>
+<polygon points="305,67 306,57 297,63" fill="#FDA4AF"/>
+<circle cx="290" cy="78" r="20" fill="#E2E8F0" stroke="#0F172A" stroke-width="2.5"/>
+<line x1="290" y1="61" x2="290" y2="67" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+<line x1="283" y1="63" x2="285" y2="66" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="297" y1="63" x2="295" y2="66" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="283" cy="76" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<circle cx="297" cy="76" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<circle cx="283" cy="76" r="2.5" fill="#1E293B"/>
+<circle cx="297" cy="76" r="2.5" fill="#1E293B"/>
+<polygon points="286,80 294,80 290,85" fill="#F43F5E"/>
+<path d="M 282 87 Q 286 92 290 86 Q 294 92 298 87" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="279" y1="77" x2="269" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="301" y1="77" x2="311" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="279" y1="83" x2="269" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="301" y1="83" x2="311" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="278" y="49" width="24" height="10" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+    <text x="372" y="72" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#DC2626">② 撒盐喵(闯祸!)</text>
+    <text x="372" y="94" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#B91C1C">爪子抖多撒 5 勺盐</text>
+
+    <text x="470" y="82" text-anchor="middle" font-size="22" font-weight="bold" fill="#3B82F6">➔</text>
+
+    <rect x="494" y="38" width="178" height="76" rx="12" fill="#FFFFFF" stroke="#60A5FA" stroke-width="2"/>
+    <polygon points="513,69 511,53 525,62" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="547,69 549,53 535,62" fill="#94A3B8" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="515,67 514,57 523,63" fill="#FDA4AF"/>
+<polygon points="545,67 546,57 537,63" fill="#FDA4AF"/>
+<circle cx="530" cy="78" r="20" fill="#94A3B8" stroke="#334155" stroke-width="2.5"/>
+<line x1="530" y1="61" x2="530" y2="67" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+<line x1="523" y1="63" x2="525" y2="66" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="537" y1="63" x2="535" y2="66" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="523" cy="76" r="4.5" fill="#1E293B"/>
+<circle cx="537" cy="76" r="4.5" fill="#1E293B"/>
+<circle cx="521.5" cy="74.5" r="1.5" fill="#FFFFFF"/>
+<circle cx="535.5" cy="74.5" r="1.5" fill="#FFFFFF"/>
+<polygon points="526,80 534,80 530,85" fill="#F43F5E"/>
+<path d="M 522 87 Q 526 92 530 86 Q 534 92 538 87" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="519" y1="77" x2="509" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="541" y1="77" x2="551" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="519" y1="83" x2="509" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="541" y1="83" x2="551" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="518" y="49" width="24" height="10" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+    <text x="608" y="72" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1E293B">③ 烤箱喵</text>
+    <text x="608" y="94" text-anchor="middle" font-size="11.5" fill="#047857">火候刚刚好</text>
+
+    <text x="694" y="82" text-anchor="middle" font-size="22" font-weight="bold" fill="#3B82F6">➔</text>
+
+    <rect x="718" y="38" width="192" height="76" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2.5"/>
+    <polygon points="739,69 737,53 751,62" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="773,69 775,53 761,62" fill="#FB923C" stroke="#9A3412" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="741,67 740,57 749,63" fill="#FDA4AF"/>
+<polygon points="771,67 772,57 763,63" fill="#FDA4AF"/>
+<circle cx="756" cy="78" r="20" fill="#FB923C" stroke="#9A3412" stroke-width="2.5"/>
+<line x1="756" y1="61" x2="756" y2="67" stroke="#9A3412" stroke-width="3" stroke-linecap="round"/>
+<line x1="749" y1="63" x2="751" y2="66" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="763" y1="63" x2="761" y2="66" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="749" cy="76" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<circle cx="763" cy="76" r="6" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+<circle cx="749" cy="76" r="2.5" fill="#1E293B"/>
+<circle cx="763" cy="76" r="2.5" fill="#1E293B"/>
+<polygon points="752,80 760,80 756,85" fill="#F43F5E"/>
+<path d="M 748 87 Q 752 92 756 86 Q 760 92 764 87" fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round"/>
+<line x1="745" y1="77" x2="735" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="767" y1="77" x2="777" y2="74" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="745" y1="83" x2="735" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="767" y1="83" x2="777" y2="86" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/>
+<ellipse cx="756" cy="60" rx="23" ry="7" fill="#FDE047" stroke="#CA8A04" stroke-width="2"/>
+<path d="M 743 60 Q 756 45 769 60 Z" fill="#FACC15" stroke="#CA8A04" stroke-width="2"/>
+    <text x="840" y="72" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#B45309">④ 店长试吃喵</text>
+    <text x="840" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#DC2626">“呸呸！咸死本喵啦!”</text>
+  </g>
+
+  <!-- 下半部分：反向传播捉虫 -->
+  <g transform="translate(32, 222)">
+    <rect width="936" height="148" rx="16" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2.5"/>
+    <text x="468" y="28" text-anchor="middle" font-size="15.5" font-weight="bold" fill="#991B1B">👈 第二趟（反向传播 backward）：拿大喇叭从后往前倒着查账本，喊 1 嗓子就破案！</text>
+
+    <path d="M 800 55 C 660 105, 500 105, 355 55" fill="none" stroke="#DC2626" stroke-width="5" stroke-dasharray="8,4"/>
+    <polygon points="355,55 372,52 366,68" fill="#DC2626"/>
+    <rect x="435" y="54" width="280" height="34" rx="10" fill="#DC2626"/>
+    <text x="575" y="76" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">📣 反向传话：“查清啦！全是盐太多惹的祸！”</text>
+
+    <rect x="28" y="98" width="880" height="38" rx="10" fill="#FFFFFF" stroke="#F87171" stroke-width="2"/>
+    <text x="468" y="122" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7F1D1D">神奇对比：笨办法要让 10000 只厨师猫挨个重做一万次蛋糕；【反向传播】顺着小账本倒着喊 1 嗓子，全员立刻知道怎么改喵！</text>
+  </g>
+</svg>

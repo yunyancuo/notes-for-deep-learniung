@@ -590,3 +590,128 @@
     overflow-x: auto;
   }
 }
+
+/* ==========================================================================
+   粉紫渐变 · 浅色磨砂毛玻璃主题（与个人主页同一视觉）
+   ========================================================================== */
+:root {
+  --color-paper: #f8f9fc;
+  --color-paper-2: #f1eff9;
+  --color-paper-3: #eae7f6;
+  --color-paper-hi: #ffffff;
+  --color-ink: #303744;
+  --color-ink-2: #4a5164;
+  --color-muted: #737b8c;
+  --color-rule: #e6e2f2;
+  --color-accent: #7d75a8;
+  --color-accent-hover: #6a6191;
+  --color-accent-ink: #ffffff;
+  --color-focus: #8b80ae;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 12px 32px rgba(141, 149, 187, 0.12);
+  --shadow-sheet: 0 24px 64px rgba(110, 100, 160, 0.16);
+  --guide: #e6e2f2;
+}
+
+body {
+  background-color: #f8f9fc;
+  background-image:
+    radial-gradient(640px 480px at 88% 4%, rgba(237, 218, 239, 0.85), transparent 68%),
+    radial-gradient(540px 440px at 84% 34%, rgba(217, 237, 249, 0.7), transparent 70%),
+    radial-gradient(580px 400px at 10% 0%, rgba(229, 220, 248, 0.8), transparent 70%),
+    radial-gradient(520px 460px at 4% 78%, rgba(243, 227, 237, 0.6), transparent 72%);
+  background-attachment: fixed;
+}
+
+.proof-ground {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* 磨砂玻璃面板 */
+.site-header .nav-pill,
+.book-closed-cover,
+.book-spread-frame,
+.book-turn-bar,
+.book-bookmarks .tab-btn,
+.btn:not(.btn--primary),
+.takeaway-card,
+.metric-cell,
+.abacus-box,
+.workbench-controls .control-group {
+  background-color: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(18px) saturate(1.25);
+  backdrop-filter: blur(18px) saturate(1.25);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+.site-header .nav-pill {
+  box-shadow: 0 14px 38px rgba(141, 149, 187, 0.16), inset 0 1px 0 #fff;
+}
+
+.book-spread-frame {
+  background-color: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(22px) saturate(1.25);
+  backdrop-filter: blur(22px) saturate(1.25);
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 64px rgba(110, 100, 160, 0.16), inset 0 1px 0 #fff;
+}
+
+.book-leaf {
+  background-color: transparent;
+}
+
+.leaf-left {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.28) 100%);
+}
+
+.book-spine {
+  background-color: rgba(233, 227, 246, 0.55);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.book-turn-bar {
+  box-shadow: 0 10px 28px rgba(141, 149, 187, 0.12);
+}
+
+.btn--primary {
+  background-color: #7d75a8;
+  border-color: #7d75a8;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(125, 117, 168, 0.28);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: #6a6191;
+  border-color: #6a6191;
+}
+
+.book-bookmarks .tab-btn[aria-selected="true"] {
+  background-color: #ffffff;
+  border-color: #b3a9d4;
+  color: #4a4468;
+  box-shadow: inset 0 -2px 0 #7d75a8;
+}
+
+.takeaway-card {
+  background-color: rgba(243, 240, 250, 0.72);
+  border-color: #e2ddf0;
+}
+
+.metric-cell {
+  background-color: rgba(247, 245, 251, 0.72);
+  border-color: #e8e4f2;
+}
+
+.media-frame,
+.crop-sheet,
+.spec-table th {
+  background-color: rgba(255, 255, 255, 0.66);
+}
+
+.leaf-title,
+.section-head h2,
+.cover-title {
+  color: #343b4c;
+}

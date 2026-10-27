@@ -1,0 +1,36 @@
+{
+  "matlab_version": "26.1.0.3203278 (R2026a)",
+  "gpu_device": "NVIDIA GeForce RTX 4070 SUPER",
+  "double_descent": {
+    "p_list": [
+      1,
+      4,
+      15,
+      110
+    ],
+    "mse_train": [
+      0.9142,
+      0.4456,
+      0.1458,
+      0.0876
+    ],
+    "mse_test": [
+      0.603,
+      0.1666,
+      0.1282,
+      0.8283
+    ]
+  },
+  "outlier_salary": {
+    "l2_mean_normal_k": 5,
+    "l2_mean_with_tycoon_k": 10004.5,
+    "l1_median_normal_k": 5,
+    "l1_median_with_tycoon_k": 5
+  },
+  "clustering": {
+    "kmeans_acc_pct": 54.7,
+    "em_gmm_acc_pct": 98.8,
+    "elbo_start": -3.27,
+    "elbo_end": -2.407
+  }
+}

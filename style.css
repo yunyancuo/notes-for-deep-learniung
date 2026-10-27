@@ -1,0 +1,346 @@
+/* Hallmark · shape: Workbench · genre: editorial · theme: Studio (deal 2/3, seed illustrated-dialogue-book-where-72f7·nosalt·2026-10-27·r0) · job: try · draw: 35f200
+ * hero: Corridor · nav: floating pill · footer: colophon block · imagery: the product · signature: live Matlab R2026a outlier and double-descent proof sheet
+ * axes: light/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P9 H9 E9 S9 R9 V9 · weakest: H, tightened hero copy to 36 words and put interactive proof sheet above fold */
+@import url("./tokens.css");
+@import url("./base.css");
+
+.proof-ground {
+  background-image: radial-gradient(circle at 1px 1px, var(--color-dot) 1px, transparent 1.4px);
+  background-size: 24px 24px;
+}
+
+.site-header {
+  position: sticky;
+  top: var(--space-md);
+  z-index: var(--z-sticky-nav);
+  padding-inline: var(--gutter);
+}
+
+.nav-pill {
+  max-width: var(--container);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-paper-hi);
+  border: var(--rule-hair) solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sheet);
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+}
+
+.nav-links a {
+  text-decoration: none;
+  transition: opacity var(--dur-micro) var(--ease-out);
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: 48px;
+  padding: 0 var(--space-lg);
+  border: var(--rule-hair) solid var(--color-ink);
+  border-radius: var(--radius-card);
+  background: var(--color-paper-hi);
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: var(--rule-hair) solid var(--color-mark);
+  pointer-events: none;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"],
+.tab-btn:disabled,
+input:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.crop-sheet {
+  position: relative;
+  background: var(--color-paper-hi);
+  border: var(--rule-hair) solid var(--color-ink);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sheet);
+  padding: var(--space-xl);
+}
+
+.crop-sheet::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--color-mark), var(--color-mark)) 0 8px / 8px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 8px 0 / 1px 8px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 100% 8px / 8px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) calc(100% - 8px) 0 / 1px 8px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 0 calc(100% - 8px) / 8px 1px no-repeat,
+    linear-gradient(var(--color-mark), var(--color-mark)) 8px 100% / 1px 8px no-repeat;
+}
+
+.hero-corridor {
+  padding-block: var(--space-2xl) var(--section-gap-s);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--gap-columns);
+  align-items: start;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-top: var(--space-md);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding-top: var(--space-xs);
+}
+
+.guide-rule {
+  height: var(--rule-hair);
+  background: var(--color-accent);
+  width: 100%;
+  margin-block: var(--space-sm);
+}
+
+.caption-line {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.workbench-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--gap-columns);
+  padding-bottom: var(--space-lg);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.control-group label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.readout-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap-columns);
+  padding-block: var(--space-lg);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+
+.metric-cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.metric-value {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.section-block {
+  padding-block: var(--section-gap-s);
+  border-top: var(--rule-hair) solid var(--color-ink);
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--gap-columns);
+  margin-bottom: var(--space-2xl);
+  align-items: end;
+}
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--gap-columns);
+}
+
+.dialogue-turn {
+  padding: var(--space-lg) 0;
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+  gap: var(--gap-columns);
+}
+
+.speaker-name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.speaker-role {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.chapter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.tab-btn {
+  min-height: 44px;
+  padding: 0 var(--space-md);
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  background: var(--color-paper-2);
+  color: var(--color-ink-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform var(--dur-micro) var(--ease-out), opacity var(--dur-micro) var(--ease-out);
+}
+
+.tab-btn[aria-selected="true"] {
+  background: var(--color-paper-hi);
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+.chapter-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: var(--gap-columns);
+  align-items: start;
+}
+
+.media-frame {
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  background: var(--color-paper-2);
+  padding: var(--space-md);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: var(--space-md) var(--space-sm);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+
+.spec-table th {
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.site-footer {
+  padding-block: var(--section-gap-s);
+  border-top: var(--rule-hair) solid var(--color-ink);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: var(--gap-columns);
+  align-items: end;
+}
+
+@media (max-width: 60rem) {
+  .hero-grid,
+  .section-head,
+  .before-after-grid,
+  .chapter-stage,
+  .footer-grid,
+  .workbench-controls {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .readout-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dialogue-turn {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-xs);
+  }
+}

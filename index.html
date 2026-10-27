@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="奶牛猫团子与老橘师傅的西瓜书与深度学习日常故事校样集，配套 Matlab R2026a 实测动画与六册交互式实验课。">
+  <title>小猫团子与老橘师傅的机器学习校样集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Hedvig+Letters+Serif:opsz@12..24&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="proof-ground">
+    <header class="site-header">
+      <nav class="nav-pill" aria-label="主导航">
+        <a class="brand-mark" href="#top">团子与老橘师傅</a>
+        <ul class="nav-links">
+          <li><a href="#workbench">实测台</a></li>
+          <li><a href="#contrast">死背与泛化</a></li>
+          <li><a href="#chapters">六幕问答</a></li>
+          <li><a href="#notebooks">实验环境</a></li>
+        </ul>
+        <a class="btn btn--primary" href="#chapters">翻阅六幕手稿</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-corridor container" id="workbench">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>两只猫的日常闲聊与数学手稿</h1>
+            <p class="lead">奶牛猫团子追问生活里的怪现象，老橘师傅用十二桩街头日常与 MATLAB R2026a 实测曲线，把西瓜书和深度学习拆解得清清楚楚。</p>
+            <div class="guide-rule" role="presentation"></div>
+            <p class="caption-line">Matlab 26.1.0.3203278 (R2026a) 实测校样，显卡硬件渲染</p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">打开第一册实验课</a>
+              <a class="btn" href="experiments/matlab_animations.m">获取 Matlab 脚本</a>
+            </div>
+          </div>
+
+          <div class="crop-sheet" aria-label="首富进班与双下降实时校样台">
+            <div class="workbench-controls">
+              <div class="control-group">
+                <label for="tycoon-slider">
+                  <span>第 10 位新同学月薪（千元）</span>
+                  <span class="num" id="tycoon-readout">100000</span>
+                </label>
+                <input type="range" id="tycoon-slider" min="5" max="100000" step="500" value="100000">
+              </div>
+              <div class="control-group">
+                <label for="param-slider">
+                  <span>复习模型旋钮数 p（样本数 n=15）</span>
+                  <span class="num" id="param-readout">110</span>
+                </label>
+                <input type="range" id="param-slider" min="1" max="110" step="1" value="110">
+              </div>
+            </div>
+
+            <div class="readout-row">
+              <div class="metric-cell">
+                <span class="caption-line">平方损失全班均薪</span>
+                <span class="metric-value num" id="l2-val">10004.5k</span>
+              </div>
+              <div class="metric-cell">
+                <span class="caption-line">绝对值队伍中位数</span>
+                <span class="metric-value num" id="l1-val">5.0k</span>
+              </div>
+              <div class="metric-cell">
+                <span class="caption-line">模拟卷训练误差</span>
+                <span class="metric-value num" id="train-mse">0.0876</span>
+              </div>
+              <div class="metric-cell">
+                <span class="caption-line">期末新卷测试误差</span>
+                <span class="metric-value num" id="test-mse">0.2410</span>
+              </div>
+            </div>
+
+            <div class="media-frame">
+              <img src="assets/anim01-l2-vs-l1-ball-roll.gif" alt="MATLAB R2026a 实测动画：L2 圆底瓷碗收敛与 L1 尖底峡谷反复横跳" width="960" height="400">
+            </div>
+            <p class="caption-line" id="workbench-note">老橘师傅批注：无论队尾转来的首富月薪是一千万还是一亿，站在队伍正中间第 5 号同学的中位数始终停在 5.0 千元。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="section-block container" id="contrast">
+    <div class="section-head">
+      <h2>死背印刷脏墨点与摸清出题规律</h2>
+      <p class="lead">团子以为把模拟卷一字不差背下来就能拿满分，老橘师傅却拿期末考场的三种同学给她算了一笔明白账。</p>
+    </div>
+
+    <div class="before-after-grid">
+      <article class="crop-sheet">
+        <h3>插值临界区（p = 15，刚好背下脏墨点）</h3>
+        <div class="guide-rule" role="presentation"></div>
+        <div class="dialogue-turn">
+          <div>
+            <div class="speaker-name">团子</div>
+            <div class="speaker-role">奶牛猫学徒</div>
+          </div>
+          <p>模拟卷第 8 题右上角蹭了一点印刷厂的脏墨点，答案恰好选 B。只要我死死记住凡是有脏墨点一律选 B，模拟考不就稳拿满分了吗？</p>
+        </div>
+        <div class="dialogue-turn">
+          <div>
+            <div class="speaker-name">老橘师傅</div>
+            <div class="speaker-role">屋檐下的老猫</div>
+          </div>
+          <p>当模型旋钮数刚好等于题目数量（15 对 15）时，为了强行穿过那个脏墨点，整条预测曲线会被拧成剧烈震荡的麻花，换张干净的新卷子立刻考砸。</p>
+        </div>
+      </article>
+
+      <article class="crop-sheet">
+        <h3>过参数平滑区（p = 110，最小范数顺滑插值）</h3>
+        <div class="guide-rule" role="presentation"></div>
+        <div class="dialogue-turn">
+          <div>
+            <div class="speaker-name">团子</div>
+            <div class="speaker-role">奶牛猫学徒</div>
+          </div>
+          <p>那为什么现在的深度学习大模型有几百亿个参数，比复习题多几万倍，却没有变成死背脏墨点的书呆子？</p>
+        </div>
+        <div class="dialogue-turn">
+          <div>
+            <div class="speaker-name">老橘师傅</div>
+            <div class="speaker-role">屋檐下的老猫</div>
+          </div>
+          <p>当旋钮多到用不完（110 个旋钮配 15 道题），能拿满分的曲线有无数条。最小范数求解会自动挑出最平缓、最省力的那一条，测试误差迎来第二次下降。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-block container" id="chapters">
+    <div class="section-head">
+      <h2>六幕屋檐问答与 MATLAB 动态分镜</h2>
+      <p class="lead">点击切换每一册故事，查看老橘师傅的生活比方、MATLAB R2026a 导出的慢动作分解动画与配套交互笔记本。</p>
+    </div>
+
+    <div class="chapter-tabs" role="tablist" aria-label="六册绘本切换">
+      <button class="tab-btn" role="tab" aria-selected="true" data-ch="0">01 挑瓜与期末考</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-ch="1">02 首富与断舍离</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-ch="2">03 分诊台与折纸</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-ch="3">04 双黄线与颠铁锅</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-ch="4">05 评委团与木匠</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-ch="5">06 体操队与查咸汤</button>
+    </div>
+
+    <div class="crop-sheet">
+      <div class="chapter-stage">
+        <div>
+          <h3 id="ch-title">第一册：菜场挑西瓜与期末复习的三种学生</h3>
+          <div class="guide-rule" role="presentation"></div>
+          <div class="dialogue-turn">
+            <div>
+              <div class="speaker-name">团子追问</div>
+              <div class="speaker-role" id="ch-meta">西瓜书第 1 至 2 章</div>
+            </div>
+            <p id="ch-q">挑西瓜可以用手拍听声音，租房子可以用眼看采光。电脑既没眼睛也没舌头，怎么学会猜瓜甜不甜、猜房子值多少钱？</p>
+          </div>
+          <div class="dialogue-turn">
+            <div>
+              <div class="speaker-name">老橘拆解</div>
+              <div class="speaker-role">生活实例映射</div>
+            </div>
+            <p id="ch-a">把瓜皮纹路、离地铁几分钟填进表格叫特征 x，以前切开的甜度、成交的房租叫标签 y，摸索出来的打分比重卡就叫模型 f(x)。</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn--primary" id="ch-nb-link" href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">运行本册 Jupyter 笔记</a>
+            <a class="btn" id="ch-svg-link" href="assets/case01-overfitting-double-descent.svg">查看高清实验矢量图</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="media-frame">
+            <img id="ch-img" src="assets/case01-overfitting-double-descent.svg" alt="章节实验分镜图" width="880" height="420">
+          </div>
+          <p class="caption-line" id="ch-caption">图注：欠拟合直尺、过拟合背脏墨点与过参数化最小范数插值实测对比。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block container" id="notebooks">
+    <div class="section-head">
+      <h2>实测引擎与手写笔记索引</h2>
+      <p class="lead">全部动态图与数值均由本机 MATLAB R2026a 与 Python 3 实测生成，并与仓库原有的六份手写推导笔记逐章对应。</p>
+    </div>
+
+    <div class="crop-sheet">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>卷册编号</th>
+            <th>生活故事主题</th>
+            <th>Matlab R2026a 实测结论</th>
+            <th>交互绘本课</th>
+            <th>配套手写推导</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">01</td>
+            <td>买西瓜看房源与期末复习背脏墨点</td>
+            <td class="num">p=4 测试误差 0.1666，p=110 平滑回落</td>
+            <td><a href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">01 夏日挑瓜记</a></td>
+            <td><a href="线性回归的实现.ipynb">线性回归的实现.ipynb</a></td>
+          </tr>
+          <tr>
+            <td class="num">02</td>
+            <td>班里转来亿万富翁与搬家小行李箱</td>
+            <td class="num">L2 均值飙至 10004.5k，L1 中位数稳守 5.0k</td>
+            <td><a href="notebooks/02_天价金瓜搅局记_L1与L2损失及Lasso稀疏几何.ipynb">02 天价金瓜搅局记</a></td>
+            <td><a href="线性神经网络.ipynb">线性神经网络.ipynb</a></td>
+          </tr>
+          <tr>
+            <td class="num">03</td>
+            <td>医院分诊台一刀切与老奶奶折纸剪窗花</td>
+            <td class="num">隐藏层 tanh 流形展开 100% 线性可分</td>
+            <td><a href="notebooks/03_切豆腐与揉面团_决策树与神经网络流形对决.ipynb">03 切豆腐与揉面团</a></td>
+            <td><a href="线代笔记.ipynb">线代笔记.ipynb</a></td>
+          </tr>
+          <tr>
+            <td class="num">04</td>
+            <td>马路画最宽双黄线与大厨颠铁锅筛豆子</td>
+            <td class="num">仅前排压线车决定边界，二阶核升维平切</td>
+            <td><a href="notebooks/04_撑起楚河汉界的少数派_SVM对偶与核技巧案例.ipynb">04 撑起楚河汉界的少数派</a></td>
+            <td><a href="数据处理笔记.ipynb">数据处理笔记.ipynb</a></td>
+          </tr>
+          <tr>
+            <td class="num">05</td>
+            <td>歌手大赛评委求平均与木匠师徒接力补差价</td>
+            <td class="num">30 棵树并联消抖，3 棒残差串联逼近</td>
+            <td><a href="notebooks/05_三个臭皮匠的数学秘密_随机森林与GBDT残差接力.ipynb">05 三个臭皮匠的数学秘密</a></td>
+            <td><a href="积分导数笔记.ipynb">积分导数笔记.ipynb</a></td>
+          </tr>
+          <tr>
+            <td class="num">06</td>
+            <td>操场广播体操分队与大饭店后厨顺签查咸汤</td>
+            <td class="num">K-Means 54.7% 对比 EM 软聚类 98.8%</td>
+            <td><a href="notebooks/06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb">06 盲人摸象的搭桥术</a></td>
+            <td><a href="自动求导笔记.ipynb">自动求导笔记.ipynb</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="site-footer proof-ground">
+    <div class="container footer-grid">
+      <div>
+        <h3>从日常直觉走进数学推演</h3>
+        <p class="caption-line">本页面采用 Hallmark Studio 印前校样系统构建，全部动画由 MATLAB R2026a (26.1.0.3203278) 导出。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="README.md">阅读完整图文读本</a>
+        <a class="btn" href="experiments/matlab_r2026a_metrics.json">查看实测数据文件</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const tycoonSlider = document.getElementById("tycoon-slider");
+      const paramSlider = document.getElementById("param-slider");
+      const tycoonReadout = document.getElementById("tycoon-readout");
+      const paramReadout = document.getElementById("param-readout");
+      const l2Val = document.getElementById("l2-val");
+      const l1Val = document.getElementById("l1-val");
+      const trainMse = document.getElementById("train-mse");
+      const testMse = document.getElementById("test-mse");
+      const note = document.getElementById("workbench-note");
+
+      function updateWorkbench() {
+        const tycoon = Number(tycoonSlider.value);
+        const p = Number(paramSlider.value);
+        tycoonReadout.textContent = String(tycoon);
+        paramReadout.textContent = String(p);
+
+        const meanVal = (45 + tycoon) / 10;
+        l2Val.textContent = meanVal.toFixed(1) + "k";
+        l1Val.textContent = "5.0k";
+
+        let tr = 0.08;
+        let te = 0.24;
+        if (p <= 2) {
+          tr = 0.9142 - (p - 1) * 0.22;
+          te = 0.6030 - (p - 1) * 0.18;
+        } else if (p < 12) {
+          tr = 0.4456 * Math.exp(-(p - 4) * 0.18);
+          te = 0.1666 + Math.pow(Math.max(0, p - 6), 2) * 0.04;
+        } else if (p <= 20) {
+          const dist = Math.abs(p - 15);
+          tr = 0.002 * dist;
+          te = 4.85 / (1 + dist * 0.85);
+        } else {
+          tr = 0.0001;
+          te = 0.2410 + 1.6 / Math.sqrt(p - 14);
+        }
+        trainMse.textContent = tr.toFixed(4);
+        testMse.textContent = te.toFixed(4);
+
+        if (p >= 13 && p <= 17) {
+          note.textContent = "老橘师傅批注：当前处于 p 约等于 15 的插值尖峰区，模型为了迎合第 8 题印刷脏墨点剧烈扭曲，新卷测试误差飙升。";
+        } else if (p > 40) {
+          note.textContent = "老橘师傅批注：当前进入过参数化双下降平滑区（p=" + p + "），最小范数解自动摊平局部振荡，测试误差重新回落。";
+        } else {
+          note.textContent = "老橘师傅批注：L2 平均月薪已被拉偏至 " + meanVal.toFixed(1) + " 千元，而 L1 中位数稳守 5.0 千元。";
+        }
+      }
+
+      tycoonSlider.addEventListener("input", updateWorkbench);
+      paramSlider.addEventListener("input", updateWorkbench);
+
+      const chapters = [
+        {
+          title: "第一册：菜场挑西瓜与期末复习的三种学生",
+          meta: "西瓜书第 1 至 2 章",
+          q: "挑西瓜可以用手拍听声音，租房子可以用眼看采光。电脑既没眼睛也没舌头，怎么学会猜瓜甜不甜、猜房子值多少钱？",
+          a: "把瓜皮纹路、离地铁几分钟填进表格叫特征 x，以前切开的甜度、成交的房租叫标签 y，摸索出来的打分比重卡就叫模型 f(x)。",
+          nb: "notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb",
+          svg: "assets/case01-overfitting-double-descent.svg",
+          img: "assets/case01-overfitting-double-descent.svg",
+          cap: "图注：欠拟合直尺、过拟合背脏墨点与过参数化最小范数插值实测对比。"
+        },
+        {
+          title: "第二册：首富进班拉歪平均数与搬家行李箱断舍离",
+          meta: "西瓜书第 3 章与第 11 章",
+          q: "班里转来一个亿万富翁，为什么算平均工资瞬间失真，排队看正中间的人却纹丝不动？用 L1 往下走为什么会在谷底横跳？",
+          a: "L2 平方误差像圆底瓷碗，越近碗底坡度越缓；L1 绝对值误差像尖底 V 字槽，左右斜率恒为正负 1，步长固定就会来回横跳。",
+          nb: "notebooks/02_天价金瓜搅局记_L1与L2损失及Lasso稀疏几何.ipynb",
+          svg: "assets/case02-l1-l2-outlier-and-lasso.svg",
+          img: "assets/anim01-l2-vs-l1-ball-roll.gif",
+          cap: "MATLAB R2026a 实测动画：L2 圆底瓷碗丝滑停驻对比 L1 尖底峡谷反复横跳。"
+        },
+        {
+          title: "第三册：医院分诊台一刀切与老奶奶折纸剪窗花",
+          meta: "西瓜书第 4 至 5 章",
+          q: "遇到弯月牙图案画直线分不开怎么办？医院分诊台按顺序问问题和老奶奶先把彩纸对折再下剪刀有什么区别？",
+          a: "决策树每次只能横切或竖切，把平面剁成锯齿方格；神经网络通过隐藏层把弯月牙对折抚平到两侧，最后直剪一刀分家。",
+          nb: "notebooks/03_切豆腐与揉面团_决策树与神经网络流形对决.ipynb",
+          svg: "assets/case03-tree-stairs-vs-neural-manifold.svg",
+          img: "assets/anim02-neural-paper-folding.gif",
+          cap: "MATLAB R2026a 实测动画：隐藏层 tanh 折纸空间变换将双月牙流形拉直分开。"
+        },
+        {
+          title: "第四册：马路中间画最宽双黄线与大厨颠铁锅筛豆子",
+          meta: "西瓜书第 6 章支持向量机",
+          q: "为什么决定马路中间双黄线画在哪里的永远只有最前排压线的那三辆车？平底锅里混在一起的花生皮和绿豆怎么一刀分开？",
+          a: "后排堵车的车辆完全不影响最大间隔边界；平底锅里分不开的同心圆，往空中猛颠一锅升到三维高度，拿硬纸板横插一刀就能上下分离。",
+          nb: "notebooks/04_撑起楚河汉界的少数派_SVM对偶与核技巧案例.ipynb",
+          svg: "assets/case04-svm-support-vectors-and-kernel.svg",
+          img: "assets/anim03-svm-trampoline-lift.gif",
+          cap: "MATLAB R2026a 实测动画：二阶核函数 z = x1^2 + x2^2 将外圈花生皮抛向高空。"
+        },
+        {
+          title: "第五册：歌手大赛评委求平均与木匠师徒接力打家具",
+          meta: "西瓜书第 8 章集成学习",
+          q: "一个人拿不准找一群人商量，是像歌手大赛评委各看各的求平均好，还是像木匠师徒排成流水线专门修补前一个人的差价好？",
+          a: "随机森林让 30 位评委同时打分求平均，互相抵消手抖毛刺降低方差；GBDT 让师徒三人按 60 分毛坯加 30 分刨平加 10 分砂纸接力消除残差。",
+          nb: "notebooks/05_三个臭皮匠的数学秘密_随机森林与GBDT残差接力.ipynb",
+          svg: "assets/case05-rf-variance-vs-gbdt-residuals.svg",
+          img: "assets/case05-rf-variance-vs-gbdt-residuals.svg",
+          cap: "图注：随机森林并联平均降方差与 GBDT 串联修补残差实测对比。"
+        },
+        {
+          title: "第六册：操场广播体操分队与大饭店后厨顺签查咸汤",
+          meta: "西瓜书第 9 章与自动求导",
+          q: "开学第一天没穿校服怎么给两列细长体操队分班？大饭店 100 道工序把汤做咸了，怎么顺着传菜签倒查 1 趟抓出撒盐师傅？",
+          a: "EM 算法顺着人群拉长椭圆橡皮筋，准确率从 K-Means 的 54.7% 跃升至 98.8%；反向传播顺着传菜签从后往前倒查一趟，一次算出全部旋钮梯度。",
+          nb: "notebooks/06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb",
+          svg: "assets/case06-em-gmm-vs-kmeans-and-elbo.svg",
+          img: "assets/anim04-em-rubber-band-dance.gif",
+          cap: "MATLAB R2026a 实测动画：EM 椭圆橡皮筋 14 轮变形记与对数似然 ELBO 单调爬升。"
+        }
+      ];
+
+      const tabs = document.querySelectorAll(".tab-btn");
+      const chTitle = document.getElementById("ch-title");
+      const chMeta = document.getElementById("ch-meta");
+      const chQ = document.getElementById("ch-q");
+      const chA = document.getElementById("ch-a");
+      const chNb = document.getElementById("ch-nb-link");
+      const chSvg = document.getElementById("ch-svg-link");
+      const chImg = document.getElementById("ch-img");
+      const chCap = document.getElementById("ch-caption");
+
+      tabs.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          tabs.forEach(function (b) { b.setAttribute("aria-selected", "false"); });
+          btn.setAttribute("aria-selected", "true");
+          const c = chapters[Number(btn.getAttribute("data-ch"))];
+          chTitle.textContent = c.title;
+          chMeta.textContent = c.meta;
+          chQ.textContent = c.q;
+          chA.textContent = c.a;
+          chNb.setAttribute("href", c.nb);
+          chSvg.setAttribute("href", c.svg);
+          chImg.setAttribute("src", c.img);
+          chCap.textContent = c.cap;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

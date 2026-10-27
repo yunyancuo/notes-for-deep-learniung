@@ -28,10 +28,10 @@
         <div class="book-stage-header">
           <div>
             <h1>像翻开绘本一样读懂西瓜书与深度学习</h1>
-            <p class="lead">左边是手绘故事插图、实验对比图谱与 Matlab R2026a 慢动作分解动画，右边是奶牛猫团子与老橘师傅在屋檐下的一问一答。</p>
+            <p class="lead">左页读团子与老橘师傅的屋檐对谈，右页看手绘插画、实验图谱与 Matlab R2026a 慢动作分解——还能当场调参数、亲手做演示。</p>
           </div>
           <div class="stage-actions">
-            <button type="button" class="btn" id="toggle-abacus-btn">展开或收起左页算盘</button>
+            <button type="button" class="btn" id="toggle-abacus-btn">展开或收起右页实验算盘</button>
             <a class="btn btn--primary" href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">打开第一册实验课</a>
           </div>
         </div>
@@ -61,10 +61,57 @@
 
           <div class="book-spread-frame" id="book-spread-frame">
             <!-- 左页：插画图板与交互算盘 -->
+            <div class="book-leaf leaf-right">
+              <div>
+                <div class="leaf-folio">
+                  <span id="spread-meta">西瓜书第 1 章与特征工程</span>
+                  <span class="num" id="right-page-num">第 02 页</span>
+                </div>
+
+                <h2 class="leaf-title" id="spread-title">第一幕：去菜市场买西瓜与毕业租房</h2>
+                <div class="guide-rule" role="presentation"></div>
+
+                <div class="dialogue-stack" id="spread-dialogues">
+                  <div class="dialogue-turn">
+                    <div>
+                      <div class="speaker-name">团子</div>
+                      <div class="speaker-role">奶牛猫学徒</div>
+                    </div>
+                    <p>老橘师傅，我们挑西瓜可以用手拍一拍听声音，去租房子可以用眼睛看采光。可是电脑是一堆芯片，既没有眼睛也没有舌头，它是怎么学会猜西瓜甜不甜、猜一套房子值多少钱的？</p>
+                  </div>
+                  <div class="dialogue-turn">
+                    <div>
+                      <div class="speaker-name">老橘师傅</div>
+                      <div class="speaker-role">屋檐下的老猫</div>
+                    </div>
+                    <p>其实跟你去菜市场买西瓜、毕业租房子做决定的路子一模一样。第一步看线索叫特征 x（瓜皮纹路、离地铁几分钟）；第二步对答案叫标签 y（切开甜不甜、成交房租多少）；第三步攒出打分比重卡就叫模型 f(x)。</p>
+                  </div>
+                </div>
+
+                <div class="takeaway-card">
+                  <div class="takeaway-title" id="spread-takeaway-title">屋檐生活比喻笔记</div>
+                  <p class="takeaway-text" id="spread-takeaway-text">买瓜拍肚皮听脆响、看房量地铁步行时间对应特征提取；旧账本里的甜度与成交价对应监督标签；摸索出的加减分比重卡对应参数化模型。</p>
+                </div>
+              </div>
+
+              <div class="leaf-actions">
+                <a class="btn btn--primary" id="spread-nb-link" href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">运行本册 Jupyter 笔记</a>
+              </div>
+            </div>
+
+            <div class="book-spine" aria-hidden="true">
+              <span class="spine-stitch"></span>
+              <span class="spine-stitch"></span>
+              <span class="spine-stitch"></span>
+              <span class="spine-stitch"></span>
+            </div>
+
+            <!-- 右页：猫咪师徒对话与生活比喻 -->
+
             <div class="book-leaf leaf-left">
               <div>
                 <div class="leaf-folio">
-                  <span id="left-folio-label">左页插画图板</span>
+                  <span id="left-folio-label">右页 · 插画与实验图板</span>
                   <span class="num" id="left-page-num">第 01 页</span>
                 </div>
 
@@ -122,53 +169,6 @@
               </div>
             </div>
 
-            <!-- 书脊中缝装订线 -->
-            <div class="book-spine" aria-hidden="true">
-              <span class="spine-stitch"></span>
-              <span class="spine-stitch"></span>
-              <span class="spine-stitch"></span>
-              <span class="spine-stitch"></span>
-            </div>
-
-            <!-- 右页：猫咪师徒对话与生活比喻 -->
-            <div class="book-leaf leaf-right">
-              <div>
-                <div class="leaf-folio">
-                  <span id="spread-meta">西瓜书第 1 章与特征工程</span>
-                  <span class="num" id="right-page-num">第 02 页</span>
-                </div>
-
-                <h2 class="leaf-title" id="spread-title">第一幕：去菜市场买西瓜与毕业租房</h2>
-                <div class="guide-rule" role="presentation"></div>
-
-                <div class="dialogue-stack" id="spread-dialogues">
-                  <div class="dialogue-turn">
-                    <div>
-                      <div class="speaker-name">团子</div>
-                      <div class="speaker-role">奶牛猫学徒</div>
-                    </div>
-                    <p>老橘师傅，我们挑西瓜可以用手拍一拍听声音，去租房子可以用眼睛看采光。可是电脑是一堆芯片，既没有眼睛也没有舌头，它是怎么学会猜西瓜甜不甜、猜一套房子值多少钱的？</p>
-                  </div>
-                  <div class="dialogue-turn">
-                    <div>
-                      <div class="speaker-name">老橘师傅</div>
-                      <div class="speaker-role">屋檐下的老猫</div>
-                    </div>
-                    <p>其实跟你去菜市场买西瓜、毕业租房子做决定的路子一模一样。第一步看线索叫特征 x（瓜皮纹路、离地铁几分钟）；第二步对答案叫标签 y（切开甜不甜、成交房租多少）；第三步攒出打分比重卡就叫模型 f(x)。</p>
-                  </div>
-                </div>
-
-                <div class="takeaway-card">
-                  <div class="takeaway-title" id="spread-takeaway-title">屋檐生活比喻笔记</div>
-                  <p class="takeaway-text" id="spread-takeaway-text">买瓜拍肚皮听脆响、看房量地铁步行时间对应特征提取；旧账本里的甜度与成交价对应监督标签；摸索出的加减分比重卡对应参数化模型。</p>
-                </div>
-              </div>
-
-              <div class="leaf-actions">
-                <a class="btn btn--primary" id="spread-nb-link" href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">运行本册 Jupyter 笔记</a>
-                <a class="btn" id="spread-svg-link" href="assets/pic01-watermelon-stall.svg">查看原寸矢量插画</a>
-              </div>
-            </div>
           </div>
 
           <div class="book-turn-bar">

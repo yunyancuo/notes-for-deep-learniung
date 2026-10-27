@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 410" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1080" height="410" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="540" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#0F172A">图 6：《西瓜书》第 8 章集成学习：好而不同（模糊分解定理）与 Bagging / Boosting 正交机制</text>
+
+  <!-- Left: Bagging & Random Forest -->
+  <rect x="28" y="56" width="500" height="330" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="278" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">1. Bagging 与随机森林：并行削减方差 (Variance Reduction)</text>
+
+  <rect x="48" y="98" width="460" height="132" rx="6" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <text x="64" y="120" font-size="12" font-weight="bold" fill="#1E40AF">设 T 个基学习器方差均为 σ²，两两误差相关系数为 ρ，则均值集成的方差为：</text>
+  <text x="278" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="13" font-weight="bold" fill="#1D4ED8">Var( H(x) ) = ρ · σ²  +  [ (1 - ρ) / T ] · σ²</text>
+  <text x="64" y="176" font-size="11" fill="#334155">• 当树的数量 T → ∞ 时，第二项归零，但第一项 ρ·σ² 顽固留存！</text>
+  <text x="64" y="196" font-size="11" fill="#1E40AF" font-weight="bold">• 为什么随机森林 (RF) 比普通 Bagging 强得多？</text>
+  <text x="64" y="216" font-size="11" fill="#334155">  若只做样本自助采样 (Bootstrap, 约 63.2% 样本入袋)，每棵树在根节点仍会挑同一个</text>
+
+  <rect x="48" y="242" width="460" height="130" rx="6" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <text x="64" y="264" font-size="11" fill="#334155">  最强特征分裂，导致树与树高度同质化（ρ 很大）。随机森林在每个节点分裂时强制只从</text>
+  <text x="64" y="284" font-size="11" fill="#334155">  随机抽取的 k = log₂d 个属性子集中找最优切分，不惜稍微牺牲单棵树的偏差，也要</text>
+  <text x="64" y="304" font-size="11" fill="#15803D" font-weight="bold">  暴力打碎树间相关性 ρ，从而把第一项 ρ·σ² 大幅压低！</text>
+  <text x="64" y="328" font-size="11" fill="#334155">• 附赠性质：袋外估计 (Out-of-Bag, OOB) 利用未入袋的 36.8% 样本零成本完成交叉验证</text>
+  <text x="64" y="350" font-size="11" fill="#64748B">• 基学习器选型：必须选“低偏差、高方差”的不稳定深树（不剪枝决策树）</text>
+
+  <!-- Right: Boosting & GBDT -->
+  <rect x="552" y="56" width="500" height="330" rx="10" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="802" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400E">2. Boosting 与 GBDT：串行削减偏差 (Function-Space Gradient Descent)</text>
+
+  <rect x="572" y="98" width="460" height="132" rx="6" fill="#FFFFFF" stroke="#FDE68A"/>
+  <text x="588" y="120" font-size="12" font-weight="bold" fill="#92400E">加法模型 (Additive Model) 与前向分步优化：</text>
+  <text x="802" y="146" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#B45309">H_m(x) = H_{m-1}(x) + η · h_m(x)</text>
+  <text x="588" y="172" font-size="11" fill="#334155">• AdaBoost (西瓜书 8.2)：最小化指数损失 exp(-y·H(x))，每轮放大错分样本权重</text>
+  <text x="588" y="192" font-size="11" fill="#334155">• GBDT (梯度提升树)：将参数空间的梯度下降推广到函数空间！第 m 棵树拟合的是</text>
+  <text x="588" y="212" font-size="11" fill="#92400E" font-weight="bold">  当前损失函数关于上一轮预测值 H_{m-1}(x_i) 的负梯度（伪残差）：r_{im} = -∂ℓ/∂H(x_i)</text>
+
+  <rect x="572" y="242" width="460" height="130" rx="6" fill="#FFFFFF" stroke="#FDE68A"/>
+  <text x="588" y="264" font-size="12" font-weight="bold" fill="#92400E">好而不同：Krogh-Vedelsby 模糊分解定理 (西瓜书 8.5 节点睛之笔)</text>
+  <text x="802" y="288" text-anchor="middle" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#047857">E(H) = Ē(h) - Ā(h)   （集成泛化误差 = 基学习器平均误差 - 平均分歧度）</text>
+  <text x="588" y="312" font-size="11" fill="#334155">• 该恒等式严格证明：集成误差严格小于个体平均误差，差值恰好等于群体分歧度 Ā(h)！</text>
+  <text x="588" y="332" font-size="11" fill="#334155">• XGBoost 的二阶飞跃：在函数空间做二阶泰勒展开（同时利用一阶导 g_i 与二阶导 h_i），</text>
+  <text x="588" y="352" font-size="11" fill="#334155">  相当于在函数空间执行牛顿法 (Newton-Raphson Step)，并显式惩罚叶子节点数与权重范数</text>
+</svg>

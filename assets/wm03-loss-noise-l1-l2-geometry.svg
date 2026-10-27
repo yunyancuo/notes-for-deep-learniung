@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 410" width="100%" height="auto" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1080" height="410" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="540" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#0F172A">图 3：损失函数的概率起源（高斯 L2 vs. 拉普拉斯 L1）与稀疏特征选择的几何机制</text>
+
+  <!-- Left: L2 vs L1 Loss & Gradient -->
+  <rect x="28" y="56" width="500" height="330" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="278" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">1. 为什么 L2 解是均值，L1 解是中位数且 SGD 在驻点震荡？</text>
+
+  <rect x="48" y="98" width="460" height="146" rx="6" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <text x="64" y="120" font-size="12" font-weight="bold" fill="#1E40AF">（对应本仓库《线性神经网络.ipynb》核心推导题）：</text>
+  <text x="64" y="142" font-size="11" fill="#334155">• 高斯噪声 ε ~ N(0, σ²)：p(ε) ∝ exp(-ε²/2σ²)  ⇒  负对数似然 L2 = ½(y - ŷ)²</text>
+  <text x="76" y="160" font-size="11" fill="#1D4ED8">梯度 ∂L/∂ŷ = -(y - ŷ)：离驻点越近梯度越小，自动平滑减速收敛于样本均值</text>
+  <text x="64" y="186" font-size="11" fill="#334155">• 拉普拉斯噪声 ε ~ Laplace(0, b)：p(ε) = ½b⁻¹exp(-|ε|/b) ⇒ L1 = |y - ŷ|</text>
+  <text x="76" y="204" font-size="11" fill="#B91C1C">次梯度 ∂L/∂ŷ = sign(ŷ - y) ∈ {-1, +1}：即使距离极值点只差 0.0001，</text>
+  <text x="76" y="222" font-size="11" fill="#B91C1C" font-weight="bold">梯度幅值依然恒为 1！若不衰减学习率 η_t 或改用 Huber Loss，必在驻点来回跳变</text>
+
+  <rect x="48" y="256" width="460" height="116" rx="6" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <text x="64" y="278" font-size="12" font-weight="bold" fill="#1E3A8A">工程选型推论（抗离群噪点鲁棒性）：</text>
+  <text x="64" y="300" font-size="11" fill="#334155">• 当标签中混入 1 个偏差为 100 的脏样本时，L2 损失产生 10,000 的惩罚与 100 倍梯度，</text>
+  <text x="64" y="320" font-size="11" fill="#334155">  整条回归直线被单个脏点强行拽偏；而 L1 梯度被硬截断在 ±1，天然具备抗离群鲁棒性。</text>
+  <text x="64" y="344" font-size="11" fill="#047857" font-weight="bold">• 现代折中方案：Smooth L1 / Huber Loss（|e|&gt;δ 用线性防爆炸，|e|≤δ 用二次保平滑）</text>
+
+  <!-- Right: L1 Diamond vs L2 Circle Sparsity -->
+  <rect x="552" y="56" width="500" height="330" rx="10" fill="#FFFBEB" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="802" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400E">2. 西瓜书第 11 章：为什么 L1 (Lasso) 产生稀疏解，L2 (Ridge) 不稀疏？</text>
+
+  <rect x="572" y="98" width="460" height="156" rx="6" fill="#FFFFFF" stroke="#FDE68A"/>
+  <!-- Left Mini Plot: L1 Diamond -->
+  <line x1="620" y1="185" x2="740" y2="185" stroke="#64748B" stroke-width="1.2"/>
+  <line x1="680" y1="120" x2="680" y2="240" stroke="#64748B" stroke-width="1.2"/>
+  <polygon points="680,145 720,185 680,225 640,185" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <ellipse cx="725" cy="135" rx="52" ry="26" transform="rotate(-25 725 135)" fill="none" stroke="#2563EB" stroke-width="1.8"/>
+  <circle cx="680" cy="145" r="5" fill="#DC2626"/>
+  <text x="680" y="250" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400E">L1 菱形球：必撞坐标轴尖角 (w₁=0)</text>
+
+  <!-- Right Mini Plot: L2 Circle -->
+  <line x1="840" y1="185" x2="960" y2="185" stroke="#64748B" stroke-width="1.2"/>
+  <line x1="900" y1="120" x2="900" y2="240" stroke="#64748B" stroke-width="1.2"/>
+  <circle cx="900" cy="185" r="38" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <ellipse cx="945" cy="135" rx="52" ry="26" transform="rotate(-25 945 135)" fill="none" stroke="#059669" stroke-width="1.8"/>
+  <circle cx="919" cy="152" r="5" fill="#DC2626"/>
+  <text x="900" y="250" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">L2 圆形球：相切于非零象限内点</text>
+
+  <rect x="572" y="266" width="460" height="106" rx="6" fill="#FFFFFF" stroke="#FDE68A"/>
+  <text x="588" y="288" font-size="12" font-weight="bold" fill="#92400E">软阈值算子 (Proximal Soft-Thresholding) 的动力学解释：</text>
+  <text x="588" y="308" font-size="11" fill="#334155">• L2 正则梯度更新：w ← (1 - ηλ)w - η∇L，权重按指数比例缩小，永远趋近 0 但不等于 0</text>
+  <text x="588" y="328" font-size="11" fill="#334155">• L1 正则近端映射：w ← sign(w)·max(|w| - ηλ, 0)，只要参数绝对值落入 [-ηλ, +ηλ] 死区，</text>
+  <text x="588" y="348" font-size="11" fill="#B45309" font-weight="bold">  一步直接归零！这正是 Lasso 自动剔除冗余特征与大模型权重稀疏化的数学根基。</text>
+</svg>

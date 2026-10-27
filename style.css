@@ -715,3 +715,69 @@ body {
 .cover-title {
   color: #343b4c;
 }
+
+/* ==========================================================================
+   全屏绘本：页面只有一本书
+   ========================================================================== */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.proof-ground {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-stage-section {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--space-3) var(--space-4);
+}
+
+.book-stage-section.container {
+  width: min(1520px, calc(100% - 2 * var(--gutter)));
+}
+
+.book-open-shell {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-bookmarks {
+  flex-shrink: 0;
+}
+
+.book-spread-frame {
+  flex: 1;
+  min-height: 0;
+  align-content: stretch;
+}
+
+.book-leaf {
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.book-turn-bar {
+  flex-shrink: 0;
+  margin-top: var(--space-3);
+}

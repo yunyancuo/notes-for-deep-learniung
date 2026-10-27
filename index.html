@@ -15,31 +15,18 @@
     <header class="site-header">
       <nav class="nav-pill" aria-label="主导航">
         <a class="brand-mark" href="#top">团子与老橘师傅的对开绘本</a>
-        <ul class="nav-links">
-          <li><a href="#book-reader">跨页绘本</a></li>
-          <li><a href="#notebooks">六册实验索引</a></li>
-        </ul>
+
         <button type="button" class="btn btn--primary" id="toggle-cover-btn">合上绘本封面</button>
       </nav>
     </header>
 
     <main id="top">
       <section class="book-stage-section container" id="book-reader">
-        <div class="book-stage-header">
-          <div>
-            <h1>像翻开绘本一样读懂西瓜书与深度学习</h1>
-            <p class="lead">左页读团子与老橘师傅的屋檐对谈，右页看手绘插画、实验图谱与 Matlab R2026a 慢动作分解——还能当场调参数、亲手做演示。</p>
-          </div>
-          <div class="stage-actions">
-            <button type="button" class="btn" id="toggle-abacus-btn">展开或收起右页实验算盘</button>
-            <a class="btn btn--primary" href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">打开第一册实验课</a>
-          </div>
-        </div>
-
         <!-- 合上封面状态 -->
         <div class="book-closed-cover" id="book-closed-cover" hidden>
           <h2 class="cover-title">小猫团子与老橘师傅的深度学习绘本</h2>
           <p class="cover-sub">用菜场挑西瓜、期末背脏墨点、首富进班、老奶奶折纸剪窗花、马路画双黄线与后厨顺签查咸汤十二桩日常小事，讲透周志华《机器学习》与现代深度学习。</p>
+          <p class="cover-sub" style="margin-top:-6px">左页读屋檐对谈，右页看插画、实验图谱与 Matlab R2026a 实测动图——翻开之后还能当场调参数、亲手做演示，键盘 ← → 翻页。</p>
           <div class="cover-art-frame">
             <img src="assets/pic01-watermelon-stall.svg" alt="小猫团子与老橘师傅绘本封面插画" width="880" height="420">
           </div>
@@ -180,84 +167,6 @@
       </section>
     </main>
   </div>
-
-  <section class="section-block container" id="notebooks">
-    <div class="section-head">
-      <h2>实测引擎与手写笔记索引</h2>
-      <p class="lead">全部动态图与数值均由本机 Matlab R2026a 与 Python 3 实测生成，并与仓库原有的六份手写推导笔记逐章对应。</p>
-    </div>
-
-    <div class="crop-sheet">
-      <table class="spec-table">
-        <thead>
-          <tr>
-            <th>卷册编号</th>
-            <th>生活故事主题</th>
-            <th>Matlab R2026a 实测结论</th>
-            <th>交互绘本课</th>
-            <th>配套手写推导</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="num">01</td>
-            <td>买西瓜看房源与期末复习背脏墨点</td>
-            <td class="num">p=4 测试误差 0.1666，p=110 平滑回落</td>
-            <td><a href="notebooks/01_夏日挑瓜记_偏差方差与双下降曲线.ipynb">01 夏日挑瓜记</a></td>
-            <td><a href="线性回归的实现.ipynb">线性回归的实现.ipynb</a></td>
-          </tr>
-          <tr>
-            <td class="num">02</td>
-            <td>班里转来亿万富翁与搬家小行李箱</td>
-            <td class="num">平方均值飙至 10004.5k，中位数稳守 5.0k</td>
-            <td><a href="notebooks/02_天价金瓜搅局记_L1与L2损失及Lasso稀疏几何.ipynb">02 天价金瓜搅局记</a></td>
-            <td><a href="线性神经网络.ipynb">线性神经网络.ipynb</a></td>
-          </tr>
-          <tr>
-            <td class="num">03</td>
-            <td>医院分诊台一刀切与老奶奶折纸剪窗花</td>
-            <td class="num">隐藏层双曲正切流形展开 100% 线性可分</td>
-            <td><a href="notebooks/03_切豆腐与揉面团_决策树与神经网络流形对决.ipynb">03 切豆腐与揉面团</a></td>
-            <td><a href="线代笔记.ipynb">线代笔记.ipynb</a></td>
-          </tr>
-          <tr>
-            <td class="num">04</td>
-            <td>马路画最宽双黄线与大厨颠铁锅筛豆子</td>
-            <td class="num">仅前排压线车决定边界，二阶核升维平切</td>
-            <td><a href="notebooks/04_撑起楚河汉界的少数派_SVM对偶与核技巧案例.ipynb">04 撑起楚河汉界的少数派</a></td>
-            <td><a href="数据处理笔记.ipynb">数据处理笔记.ipynb</a></td>
-          </tr>
-          <tr>
-            <td class="num">05</td>
-            <td>歌手大赛评委求平均与木匠师徒接力补差价</td>
-            <td class="num">30 棵树并联消抖，3 棒残差串联逼近</td>
-            <td><a href="notebooks/05_三个臭皮匠的数学秘密_随机森林与GBDT残差接力.ipynb">05 三个臭皮匠的数学秘密</a></td>
-            <td><a href="积分导数笔记.ipynb">积分导数笔记.ipynb</a></td>
-          </tr>
-          <tr>
-            <td class="num">06</td>
-            <td>操场广播体操分队与大饭店后厨顺签查咸汤</td>
-            <td class="num">硬聚类 54.7% 对比椭圆软聚类 98.8%</td>
-            <td><a href="notebooks/06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb">06 盲人摸象的搭桥术</a></td>
-            <td><a href="自动求导笔记.ipynb">自动求导笔记.ipynb</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <footer class="site-footer proof-ground">
-    <div class="container footer-grid">
-      <div>
-        <h3>从日常直觉走进数学推演</h3>
-        <p class="caption-line">本页面采用 Hallmark Studio 印前校样系统构建，全部动画由 Matlab R2026a (26.1.0.3203278) 导出。</p>
-      </div>
-      <div class="stage-actions">
-        <a class="btn btn--primary" href="README.md">阅读完整图文读本</a>
-        <a class="btn" href="experiments/matlab_r2026a_metrics.json">查看实测数据文件</a>
-      </div>
-    </div>
-  </footer>
 
   <script>
     (function () {
@@ -407,7 +316,6 @@
       const openShell = document.getElementById("book-open-shell");
       const toggleCoverBtn = document.getElementById("toggle-cover-btn");
       const unfoldBookBtn = document.getElementById("unfold-book-btn");
-      const toggleAbacusBtn = document.getElementById("toggle-abacus-btn");
       const spreadAbacus = document.getElementById("spread-abacus");
       const spreadFrame = document.getElementById("book-spread-frame");
 
@@ -422,7 +330,6 @@
       const takeawayTitle = document.getElementById("spread-takeaway-title");
       const takeawayText = document.getElementById("spread-takeaway-text");
       const spreadNbLink = document.getElementById("spread-nb-link");
-      const spreadSvgLink = document.getElementById("spread-svg-link");
       const prevBtn = document.getElementById("prev-spread-btn");
       const nextBtn = document.getElementById("next-spread-btn");
       const statusText = document.getElementById("spread-status-text");
@@ -479,7 +386,6 @@
         takeawayTitle.textContent = s.takeawayTitle;
         takeawayText.textContent = s.takeawayText;
         spreadNbLink.setAttribute("href", s.nb);
-        spreadSvgLink.setAttribute("href", s.caseImg || s.storyImg);
 
         spreadDialogues.replaceChildren();
         s.turns.forEach(function (t) {
@@ -571,10 +477,6 @@
         openShell.hidden = false;
         openShell.classList.add("is-unfolding");
         toggleCoverBtn.textContent = "合上绘本封面";
-      });
-
-      toggleAbacusBtn.addEventListener("click", function () {
-        spreadAbacus.hidden = !spreadAbacus.hidden;
       });
 
       const tycoonSlider = document.getElementById("tycoon-slider");

@@ -6,7 +6,7 @@
 import os
 import xml.etree.ElementTree as ET
 
-ROOT = r'C:\Users\34684\Documents\notes-for-deep-learniung'
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 ASSETS = os.path.join(ROOT, 'assets')
 os.makedirs(ASSETS, exist_ok=True)
 

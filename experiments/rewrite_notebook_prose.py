@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """重写六册实验课的 markdown 文案：口语更自然、减少加粗堆砌、去掉模板腔。"""
 import json
-import io
 import os
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -242,7 +241,7 @@ GBDT 的关键：每棵新树拟合的不是原始标签 $y$，而是上一轮�
 REWRITE['06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb'] = (
 """# 第 6 册 · 盲人摸象的搭桥术
 
-> 主角：**团子** × **老橘师傅**。对应《西瓜书》第 9 章（聚类）与第 5 章（反向传播），联动仓库笔记 [自动求导.ipynb](../自动求导.ipynb)。
+> 主角：**团子** × **老橘师傅**。对应《西瓜书》第 9 章（聚类）与第 5 章（反向传播），联动仓库笔记 [自动求导笔记.ipynb](../自动求导笔记.ipynb)。
 
 ![第 7 幕：操场广播体操分队与橡皮筋聚类](../assets/pic07-rubber-band-clustering.svg)
 
@@ -290,18 +289,27 @@ REWRITE['06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb']
 
 西瓜书到这里翻完了大半，但真正的练习场在生活里：下次拍西瓜的时候，想想特征、标签和你脑子里那张打分卡。""")
 
-for fname, (cell0, cell_last) in REWRITE.items():
+def _build_markdown_cell(src, cell_id):
+    """构造符合 nbformat 4.5 规范的 Markdown 单元格。"""
+    lines = src.split('\n')
+    source = [ln + '\n' for ln in lines[:-1]] + [lines[-1]] if len(lines) > 1 else [src]
+    return {'cell_type': 'markdown', 'id': cell_id, 'metadata': {}, 'source': source}
+
+
+for idx, (fname, (cell0, cell_last)) in enumerate(REWRITE.items(), start=1):
     path = os.path.join(NB, fname)
-    nb = json.load(io.open(path, encoding='utf-8'))
+    with open(path, encoding='utf-8') as f:
+        nb = json.load(f)
     md_cells = [i for i, c in enumerate(nb['cells']) if c['cell_type'] == 'markdown']
     first, last = md_cells[0], md_cells[-1]
 
-    def mk(src):
-        return {'cell_type': 'markdown', 'metadata': {}, 'source': src.split('\n')[:-1] and [ln + '\n' for ln in src.split('\n')[:-1]] + [src.split('\n')[-1]]}
+    first_id = nb['cells'][first].get('id', f'nb{idx:02d}-cell-{first:02d}')
+    last_id = nb['cells'][last].get('id', f'nb{idx:02d}-cell-{last:02d}')
+    nb['cells'][first] = _build_markdown_cell(cell0, first_id)
+    nb['cells'][last] = _build_markdown_cell(cell_last, last_id)
 
-    nb['cells'][first] = mk(cell0)
-    nb['cells'][last] = mk(cell_last)
-    json.dump(nb, io.open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(nb, f, ensure_ascii=False, indent=1)
     print('rewritten', fname)
 
 print('done')

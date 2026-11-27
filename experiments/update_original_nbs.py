@@ -2,7 +2,7 @@
 import os
 import nbformat
 
-root = r'C:\Users\34684\Documents\notes-for-deep-learniung'
+root = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 mapping = {
     '数据处理笔记.ipynb': (
         '前置基石一：张量操作与特征预处理',
@@ -18,7 +18,7 @@ mapping = {
     ),
     '自动求导笔记.ipynb': (
         '前置基石四：PyTorch 动态计算图与反向传播 (Autograd)',
-        '对应《西瓜书》第 5 章 5.3 节误差逆传播 (BP) 算法，联动手搓 Autograd 绘本案例课 [`notebooks/06_盲人摸象与回声追责_EM软聚类与手搓Autograd引擎.ipynb`](./notebooks/06_盲人摸象与回声追责_EM软聚类与手搓Autograd引擎.ipynb)'
+        '对应《西瓜书》第 5 章 5.3 节误差逆传播 (BP) 算法，联动手搓 Autograd 绘本案例课 [`notebooks/06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb`](./notebooks/06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb)'
     ),
     '线性神经网络.ipynb': (
         '核心枢纽五：从高斯/拉普拉斯极大似然到线性神经网络',

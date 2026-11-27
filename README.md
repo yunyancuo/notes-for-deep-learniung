@@ -4,7 +4,7 @@
 
 **怎么读**
 
-- 在线读：仓库首页的 [`index.html`](index.html) 是一册对开翻页绘本，左页对谈、右页看图，支持键盘翻页；
+- 在线读：仓库首页的 [`index.html`](index.html) 是一册粉紫渐变磨砂毛玻璃全屏双页翻页绘本，左页对谈、右页看图与互动调参，支持 URL 锚点直达（如 `#spread=3&mode=anim`）、键盘快捷键（`←` / `→` / `Home` / `End` / `Esc`）与触屏左右滑屏翻页；
 - 动手读：每一幕配一册 [Jupyter 实验课](notebooks/)，参数可调、结论可复算；
 - 复现动画：MATLAB 脚本在 [`experiments/matlab_animations.m`](experiments/matlab_animations.m)，插画源码在 [`experiments/build_story_illustrations.py`](experiments/build_story_illustrations.py)。
 
@@ -176,8 +176,8 @@ $L_2$ 岭回归（Ridge）像个舍不得扔旧衣服的人，把 10 件衣服�
 
 ```text
 notes-for-deep-learniung/
-├── index.html                                                     # Hallmark Studio 印前校样交互版（通过 sloplint 0 FAIL 0 WARN 校验）
-├── style.css / tokens.css / base.css                              # Hallmark Studio 材质与排版样式系统
+├── index.html                                                     # 粉紫渐变磨砂毛玻璃全屏双页绘本阅读站（支持 Hash 深链、快捷键与触屏滑页）
+├── style.css / tokens.css / base.css                              # 粉紫磨砂主题设计令牌、响应式双页排版与无障碍降级样式系统
 ├── README.md                                                      # 团子与老橘师傅的生活故事绘本主读本
 ├── notebooks/                                                     # 6 册师徒对话交互式 Jupyter 实验课（含完整运行输出）
 │   ├── 01_夏日挑瓜记_偏差方差与双下降曲线.ipynb
@@ -186,12 +186,40 @@ notes-for-deep-learniung/
 │   ├── 04_撑起楚河汉界的少数派_SVM对偶与核技巧案例.ipynb
 │   ├── 05_三个臭皮匠的数学秘密_随机森林与GBDT残差接力.ipynb
 │   └── 06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb
-├── assets/                                                        # 8 张师徒对话插图 (pic01~08.svg) + 4 张 MATLAB R2026a 动态图 (anim01~04.gif) + 6 张实验对比图
-├── experiments/                                                   # 科学仿真与图表生成脚本
+├── assets/                                                        # 8 张师徒对话插图 (pic01~08.svg) + 4 张 MATLAB R2026a 动图 (anim01~04.gif) + 6 张实验图谱 (case01~06.svg)
+├── experiments/                                                   # 科学仿真、插画与笔记本构建脚本
 │   ├── matlab_animations.m                                        # 原生 MATLAB R2026a 动态 GIF 与实测数据生成脚本
 │   ├── matlab_r2026a_metrics.json                                 # MATLAB R2026a (26.1.0.3203278) 实测导出的基准数据
-│   ├── build_cartoon_svgs.py                                      # 生成 8 张团子问与老橘答场景 SVG
-│   ├── build_storybook_cases.py                                   # 生成 6 张实验对比 SVG
-│   └── build_cat_notebooks.py                                     # 组装并预执行 6 册 Jupyter Notebook
-└── 数据处理笔记.ipynb / 自动求导笔记.ipynb / 线性回归的实现.ipynb / ... # 早期手写 PyTorch 基础与数学推导笔记
+│   ├── build_story_illustrations.py                               # 当前粉彩奶油纸底八幕猫咪插画 (pic01~08.svg) 生成脚本
+│   ├── build_cartoon_svgs.py                                      # 早期暖橘卡通版八幕插画生成脚本（归档参考）
+│   ├── build_matlab_style_animations.py                           # Python / Matplotlib 备选动态 GIF 动画生成脚本
+│   ├── build_storybook_cases.py                                   # 生成 6 张实验对比图谱 (case01~06.svg) 与基础实验课逻辑
+│   ├── build_cat_notebooks.py                                     # 组装并预执行 6 册师徒对话 Jupyter 实验课
+│   ├── rewrite_notebook_prose.py                                  # 6 册实验课 Markdown 口语化文案润色脚本
+│   └── update_original_nbs.py                                     # 为早期手写推导笔记批量注入绘本体系导航栏脚本
+├── tests/                                                         # 仓库完整性、资源链接与前端语法自动化校验测试
+│   └── test_repo_integrity.py
+├── pyproject.toml                                                 # ruff 与 pytest 工程配置
+├── .github/workflows/ci.yml                                       # GitHub Actions 自动化校验工作流
+└── 数据处理笔记.ipynb / 线代笔记.ipynb / 积分导数笔记.ipynb /
+    自动求导笔记.ipynb / 线性神经网络.ipynb / 线性回归的实现.ipynb  # 早期手写 PyTorch 基础与数学推导笔记
+```
+
+### 本地预览绘本阅读站
+
+在仓库根目录启动任意静态 HTTP 服务即可完整体验双页翻页绘本、动图切换与参数算盘：
+
+```bash
+python -m http.server 8000
+```
+
+随后在浏览器打开 `http://localhost:8000/`（也可通过 `http://localhost:8000/#spread=3&mode=anim` 直达指定幕与图板视图）。
+
+### 仓库完整性与代码质量校验
+
+本仓库内置自动化测试套件，用于持续校验 12 册 `.ipynb` 格式与链接完整性、全部 SVG/GIF 资源有效性、MATLAB R2026a 实测指标完整性以及前端 HTML/JS 语法健康度：
+
+```bash
+ruff check experiments tests
+pytest -v
 ```

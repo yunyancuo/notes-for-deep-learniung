@@ -1,6 +1,5 @@
-/* Hallmark · shape: Workbench · genre: editorial · theme: Studio (deal 2/3, seed illustrated-dialogue-book-where-72f7·nosalt·2026-10-27·r0) · job: try · draw: 35f200
- * hero: Corridor · nav: floating pill · footer: colophon block · imagery: the product · signature: live Matlab R2026a outlier and double-descent proof sheet
- * axes: light/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* 小猫团子与老橘师傅《西瓜书 × 深度学习》全屏双页绘本阅读站样式表
+ * 视觉主题：粉紫渐变浅色磨砂毛玻璃双页阅读器（支持桌面全屏、移动端响应式及无障碍降级） */
 @import "./tokens.css";
 @import "./base.css";
 
@@ -31,6 +30,7 @@
   gap: var(--space-4);
   padding: var(--space-2) var(--space-4);
   background-color: var(--surface-glass);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
@@ -185,6 +185,10 @@
   margin-bottom: var(--space-4);
 }
 
+.cover-sub--tight {
+  margin-top: -6px;
+}
+
 .cover-art-frame {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -313,16 +317,45 @@
 }
 
 .media-frame {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   overflow: hidden;
   background-color: var(--surface);
+  min-height: 160px;
 }
 
 .media-frame img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.media-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 200px;
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--ink-2);
+  font-size: var(--text-small);
+  background: linear-gradient(135deg, rgba(243, 240, 250, 0.85), rgba(248, 249, 252, 0.9));
+}
+
+.media-fallback-title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.media-fallback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
 }
 
 .plate-switcher {
@@ -687,11 +720,39 @@ body {
   border-color: #6a6191;
 }
 
-.book-bookmarks .tab-btn[aria-selected="true"] {
+.book-bookmarks .tab-btn[aria-selected="true"],
+.plate-switcher .tab-btn[aria-selected="true"] {
   background-color: #ffffff;
   border-color: #b3a9d4;
   color: #4a4468;
   box-shadow: inset 0 -2px 0 #7d75a8;
+}
+
+.plate-switcher .tab-btn {
+  background-color: rgba(255, 255, 255, 0.62);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+.plate-switcher .tab-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* 不支持 backdrop-filter 的浏览器平滑降级为高不透明度浅雾白卡片，保障对比度 */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header .nav-pill,
+  .book-closed-cover,
+  .book-spread-frame,
+  .book-turn-bar,
+  .book-bookmarks .tab-btn,
+  .plate-switcher .tab-btn,
+  .btn:not(.btn--primary),
+  .takeaway-card,
+  .metric-cell,
+  .abacus-box,
+  .workbench-controls .control-group {
+    background-color: rgba(255, 255, 255, 0.92);
+  }
 }
 
 .takeaway-card {
@@ -717,7 +778,7 @@ body {
 }
 
 /* ==========================================================================
-   全屏绘本：页面只有一本书
+   全屏绘本：桌面宽屏下页面只有一本书；窄屏/矮屏自动释放自然滚动
    ========================================================================== */
 html,
 body {
@@ -729,7 +790,9 @@ body {
 }
 
 .proof-ground {
+  height: 100vh;
   height: 100svh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -749,6 +812,7 @@ main {
   flex-direction: column;
   justify-content: center;
   padding-block: var(--space-3) var(--space-4);
+  overflow-y: auto;
 }
 
 .book-stage-section.container {
@@ -770,6 +834,7 @@ main {
   flex: 1;
   min-height: 0;
   align-content: stretch;
+  touch-action: pan-y;
 }
 
 .book-leaf {
@@ -780,4 +845,112 @@ main {
 .book-turn-bar {
   flex-shrink: 0;
   margin-top: var(--space-3);
+}
+
+/* 移动端、窄屏及矮视口适配：避免全屏 overflow:hidden 裁切单列双页或封面按钮 */
+@media (max-width: 960px), (max-height: 660px) {
+  html,
+  body {
+    height: auto;
+  }
+
+  body {
+    overflow-y: auto;
+    overflow-x: clip;
+    background-attachment: scroll;
+  }
+
+  .proof-ground {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .book-stage-section {
+    justify-content: flex-start;
+    overflow-y: visible;
+    padding-block: var(--space-3) var(--space-5);
+  }
+
+  .book-open-shell,
+  .book-spread-frame {
+    flex: 0 0 auto;
+  }
+
+  .book-leaf {
+    overflow: visible;
+    padding: var(--space-4);
+  }
+
+  .leaf-left {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.28) 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding-inline: var(--gutter);
+  }
+
+  .nav-pill {
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .brand-mark {
+    font-size: var(--text-small);
+  }
+
+  .book-bookmarks {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    margin-bottom: var(--space-3);
+  }
+
+  .book-bookmarks::-webkit-scrollbar {
+    display: none;
+  }
+
+  .book-bookmarks .tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .book-closed-cover {
+    padding: var(--space-4);
+  }
+
+  .book-turn-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .turn-status {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    font-size: var(--text-xs);
+  }
+}
+
+/* 尊重用户减少动态效果偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .book-spread-frame.is-turning {
+    opacity: 1;
+    transform: none;
+  }
+
+  .book-open-shell.is-unfolding {
+    animation: none;
+  }
+
+  .btn:hover:not(:disabled) {
+    transform: none;
+  }
 }

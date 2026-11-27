@@ -16,7 +16,7 @@ plt.rcParams['axes.unicode_minus'] = False
 plt.rcParams['figure.facecolor'] = '#FFFBEB'
 plt.rcParams['axes.facecolor'] = '#FFFFFF'
 
-ROOT = r'C:\Users\34684\Documents\notes-for-deep-learniung'
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 ASSETS = os.path.join(ROOT, 'assets')
 os.makedirs(ASSETS, exist_ok=True)
 
@@ -26,7 +26,8 @@ def fig_to_pil(fig):
     fig.savefig(buf, format='png', dpi=105, bbox_inches='tight', facecolor=fig.get_facecolor())
     plt.close(fig)
     buf.seek(0)
-    return Image.open(buf).convert('P', palette=Image.ADAPTIVE, colors=128)
+    with Image.open(buf) as img:
+        return img.convert('P', palette=Image.ADAPTIVE, colors=128)
 
 
 def save_gif(frames, filename, duration=140):
@@ -71,9 +72,11 @@ def build_anim01():
         cur_x = hist_l2[step]
         ax.scatter([cur_x], [0.5 * cur_x**2], c='#16A34A', s=150, zorder=6, edgecolors='black', lw=1.5,
                    label=f'当前玻璃珠位置 θ = {cur_x:+.3f}')
-        ax.set_xlim(-4.2, 4.2); ax.set_ylim(-0.5, 8.5)
+        ax.set_xlim(-4.2, 4.2)
+        ax.set_ylim(-0.5, 8.5)
         ax.set_title('① L2 平方误差：像圆底瓷碗，稳稳停在碗底 0 点', fontsize=11, fontweight='bold')
-        ax.set_xlabel('参数偏离 θ'); ax.set_ylabel('损失高度 L(θ)')
+        ax.set_xlabel('参数偏离 θ')
+        ax.set_ylabel('损失高度 L(θ)')
         ax.legend(loc='upper center', fontsize=9)
         ax.grid(True, linestyle='--', alpha=0.6)
 
@@ -85,9 +88,11 @@ def build_anim01():
         cur_x1 = hist_l1[step]
         ax.scatter([cur_x1], [np.abs(cur_x1) * 1.8], c='#EA580C', s=150, zorder=6, edgecolors='black', lw=1.5,
                    label=f'当前玻璃珠位置 θ = {cur_x1:+.3f}')
-        ax.set_xlim(-4.2, 4.2); ax.set_ylim(-0.5, 8.5)
+        ax.set_xlim(-4.2, 4.2)
+        ax.set_ylim(-0.5, 8.5)
         ax.set_title('② L1 绝对值误差：步长固定时在谷底永远左右横跳！', fontsize=11, fontweight='bold')
-        ax.set_xlabel('参数偏离 θ'); ax.set_ylabel('损失高度 L(θ)')
+        ax.set_xlabel('参数偏离 θ')
+        ax.set_ylabel('损失高度 L(θ)')
         ax.legend(loc='upper center', fontsize=9)
         ax.grid(True, linestyle='--', alpha=0.6)
 
@@ -112,25 +117,38 @@ def build_anim02():
     # 训练 2 层网络获得展开后的 2D 坐标 A2
     np.random.seed(7)
     H = 16
-    W1 = np.random.randn(2, H) * 1.4; b1 = np.zeros((1, H))
-    W2 = np.random.randn(H, 2) * 0.6; b2 = np.zeros((1, 2))
-    W3 = np.random.randn(2, 1) * 0.8; b3 = np.zeros((1, 1))
+    W1 = np.random.randn(2, H) * 1.4
+    b1 = np.zeros((1, H))
+    W2 = np.random.randn(H, 2) * 0.6
+    b2 = np.zeros((1, 2))
+    W3 = np.random.randn(2, 1) * 0.8
+    b3 = np.zeros((1, 1))
     y_col = y[:, None].astype(float)
     lr = 0.08
     for _ in range(900):
-        Z1 = X @ W1 + b1; A1 = np.maximum(0, Z1)
-        Z2 = A1 @ W2 + b2; A2 = np.tanh(Z2)
+        Z1 = X @ W1 + b1
+        A1 = np.maximum(0, Z1)
+        Z2 = A1 @ W2 + b2
+        A2 = np.tanh(Z2)
         logits = A2 @ W3 + b3
         prob = 1.0 / (1.0 + np.exp(-np.clip(logits, -15, 15)))
         dlogits = (prob - y_col) / len(X)
-        dW3 = A2.T @ dlogits; db3 = np.sum(dlogits, axis=0, keepdims=True)
-        dA2 = dlogits @ W3.T; dZ2 = dA2 * (1.0 - A2 ** 2)
-        dW2 = A1.T @ dZ2; db2 = np.sum(dZ2, axis=0, keepdims=True)
-        dA1 = dZ2 @ W2.T; dZ1 = dA1 * (Z1 > 0)
-        dW1 = X.T @ dZ1; db1 = np.sum(dZ1, axis=0, keepdims=True)
-        W1 -= lr * dW1; b1 -= lr * db1
-        W2 -= lr * dW2; b2 -= lr * db2
-        W3 -= lr * dW3; b3 -= lr * db3
+        dW3 = A2.T @ dlogits
+        db3 = np.sum(dlogits, axis=0, keepdims=True)
+        dA2 = dlogits @ W3.T
+        dZ2 = dA2 * (1.0 - A2 ** 2)
+        dW2 = A1.T @ dZ2
+        db2 = np.sum(dZ2, axis=0, keepdims=True)
+        dA1 = dZ2 @ W2.T
+        dZ1 = dA1 * (Z1 > 0)
+        dW1 = X.T @ dZ1
+        db1 = np.sum(dZ1, axis=0, keepdims=True)
+        W1 -= lr * dW1
+        b1 -= lr * db1
+        W2 -= lr * dW2
+        b2 -= lr * db2
+        W3 -= lr * dW3
+        b3 -= lr * db3
 
     # 归一化原坐标 X_norm 到 [-1, 1] 方便平滑插值过渡到 A2
     X_norm = (X - X.mean(axis=0)) / (X.std(axis=0) * 1.3)
@@ -142,7 +160,7 @@ def build_anim02():
 
     alphas = np.concatenate([np.linspace(0, 1, 14), [1.0, 1.0, 1.0]])
     frames = []
-    for idx, alpha in enumerate(alphas):
+    for alpha in alphas:
         fig, ax = plt.subplots(figsize=(6.8, 4.5))
         cur_pts = (1 - alpha) * X_norm + alpha * A2
         cur_grid = (1 - alpha) * g_norm + alpha * g_a2
@@ -163,7 +181,8 @@ def build_anim02():
             h2_v = -(W3[0, 0] * h1_v + b3[0, 0]) / (W3[1, 0] + 1e-8)
             ax.plot(h1_v, h2_v, 'g--', lw=3.0, zorder=5, label='[剪刀线] 折好后直着剪一刀就彻底分开！')
 
-        ax.set_xlim(-1.45, 1.45); ax.set_ylim(-1.35, 1.35)
+        ax.set_xlim(-1.45, 1.45)
+        ax.set_ylim(-1.35, 1.35)
         stage_txt = "原图：红蓝月牙拧成麻花，直剪刀剪不开" if alpha < 0.2 else (
             f"隐藏层正在折纸拉平空间... (展开进度 {int(alpha*100)}%)" if alpha < 0.95 else "[完成] 折纸完成！红蓝分列两边，一刀笔直剪开！"
         )
@@ -204,13 +223,17 @@ def build_anim03():
         if t > 0.65:
             ax.plot_surface(px, py, pz, color='#38BDF8', alpha=0.35)
 
-        ax.set_xlim(-1.6, 1.6); ax.set_ylim(-1.6, 1.6); ax.set_zlim(0, 2.5)
+        ax.set_xlim(-1.6, 1.6)
+        ax.set_ylim(-1.6, 1.6)
+        ax.set_zlim(0, 2.5)
         ax.view_init(elev=52 - 30 * t, azim=20 + idx * 9)
         msg = "平底盘里：花生皮围住绿豆，怎么画直线都分不开" if t < 0.2 else (
             f"正在往上颠铁锅升维 z=x1^2+x2^2... ({int(t*100)}%)" if t < 0.85 else "[完成] 飞到半空啦！拿蓝色硬纸板从中间平插一刀搞定！"
         )
         ax.set_title(f'[动态实验 3] SVM“颠铁锅筛花生米”三维核升维\n{msg}', fontsize=11, fontweight='bold', color='#065F46')
-        ax.set_xlabel('x1'); ax.set_ylabel('x2'); ax.set_zlabel('高度 z')
+        ax.set_xlabel('x1')
+        ax.set_ylabel('x2')
+        ax.set_zlabel('高度 z')
         ax.legend(loc='upper left', fontsize=8.5)
         fig.tight_layout()
         frames.append(fig_to_pil(fig))
@@ -259,17 +282,21 @@ def build_anim04():
         z1 = multivariate_normal.pdf(gpts, mu_k[1], sig_k[1]).reshape(gx.shape)
         ax.contour(gx, gy, z0, levels=3, colors='#1D4ED8', linewidths=2.0)
         ax.contour(gx, gy, z1, levels=3, colors='#15803D', linewidths=2.0)
-        ax.set_xlim(-3.5, 5.0); ax.set_ylim(-3.0, 4.0)
+        ax.set_xlim(-3.5, 5.0)
+        ax.set_ylim(-3.0, 4.0)
         ax.set_title('① 两条橡皮筋顺着长条队形自动拉长变扁！', fontsize=11, fontweight='bold')
-        ax.set_xlabel('操场横坐标 x1'); ax.set_ylabel('操场纵坐标 x2')
+        ax.set_xlabel('操场横坐标 x1')
+        ax.set_ylabel('操场纵坐标 x2')
         ax.legend(loc='lower left', fontsize=8.5)
         ax.grid(True, linestyle='--', alpha=0.6)
 
         ax2 = axes[1]
         ax2.plot(range(1, len(log_liks)+1), log_liks, 'o-', color='#7C3AED', lw=2.6, markersize=6, label='对数似然得分 (ELBO)')
-        ax2.set_xlim(1, 14); ax2.set_ylim(-760, -640)
+        ax2.set_xlim(1, 14)
+        ax2.set_ylim(-760, -640)
         ax2.set_title('② 搭梯子爬山 (ELBO)：每一轮得分严格往上涨！', fontsize=11, fontweight='bold')
-        ax2.set_xlabel('EM 来回调整轮数'); ax2.set_ylabel('贴合度总分 log P(X|θ)')
+        ax2.set_xlabel('EM 来回调整轮数')
+        ax2.set_ylabel('贴合度总分 log P(X|θ)')
         ax2.legend(loc='lower right', fontsize=9)
         ax2.grid(True, linestyle='--', alpha=0.6)
 
@@ -281,7 +308,8 @@ def build_anim04():
         pi_k = np.array([N_k0, N_k1]) / len(X)
         mu_k[0] = (gamma0[:, None] * X).sum(axis=0) / N_k0
         mu_k[1] = (gamma1[:, None] * X).sum(axis=0) / N_k1
-        dX0 = X - mu_k[0]; dX1 = X - mu_k[1]
+        dX0 = X - mu_k[0]
+        dX1 = X - mu_k[1]
         sig_k[0] = (dX0.T @ (gamma0[:, None] * dX0)) / N_k0 + np.eye(2) * 1e-4
         sig_k[1] = (dX1.T @ (gamma1[:, None] * dX1)) / N_k1 + np.eye(2) * 1e-4
 

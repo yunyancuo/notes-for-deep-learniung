@@ -64,7 +64,7 @@ def cat(cx, cy, r=30, role='tuanzi', mood='hi'):
         e.append(f'<path d="M {cx-r*0.98:.0f} {cy+r*0.28:.0f} Q {cx-r*0.62:.0f} {cy+r*0.42:.0f} {cx-r*0.70:.0f} {cy+r*0.78:.0f} Q {cx-r*0.95:.0f} {cy+r*0.66:.0f} {cx-r*0.98:.0f} {cy+r*0.28:.0f} Z" fill="{patch}" opacity="0.85"/>')
     else:
         # 橘猫条纹
-        for i, dx in enumerate((-0.34, 0.0, 0.34)):
+        for dx in (-0.34, 0.0, 0.34):
             x0 = cx + r * dx
             e.append(f'<path d="M {x0-4:.0f} {cy-r+4:.0f} Q {x0:.0f} {cy-r*0.62:.0f} {x0+4:.0f} {cy-r+4:.0f}" fill="none" stroke="{patch}" stroke-width="3" stroke-linecap="round"/>')
     # 眼睛
@@ -246,9 +246,9 @@ def car(cx, cy, c, sc=1.0, ring=False):
     s.append(f'<g transform="translate({cx},{cy}) scale({sc})">')
     s.append(f'<rect x="-14" y="-10" width="28" height="14" rx="6" fill="{c}"/>')
     s.append(f'<path d="M -8 -10 q 4 -8 12 -8 q 6 0 8 8 z" fill="{c}"/>')
-    s.append(f'<circle cx="-7" cy="5" r="3.4" fill="#4A4560"/>')
-    s.append(f'<circle cx="7" cy="5" r="3.4" fill="#4A4560"/>')
-    s.append(f'<rect x="-4" y="-7" width="10" height="5" rx="2" fill="#FFFFFF" opacity="0.75"/>')
+    s.append('<circle cx="-7" cy="5" r="3.4" fill="#4A4560"/>')
+    s.append('<circle cx="7" cy="5" r="3.4" fill="#4A4560"/>')
+    s.append('<rect x="-4" y="-7" width="10" height="5" rx="2" fill="#FFFFFF" opacity="0.75"/>')
     s.append('</g>')
     if ring:
         s.append(f'<circle cx="{cx}" cy="{cy-2}" r="17" fill="none" stroke="#C9A13B" stroke-width="2.2" stroke-dasharray="3 3"/>')
@@ -259,7 +259,8 @@ def car(cx, cy, c, sc=1.0, ring=False):
 # pic02 三种学生
 # --------------------------------------------------------------------------
 def pic02():
-    import math, random
+    import math
+    import random
     s = [paper()]
     s.append(header(
         'ACT 2 · 西瓜书第 2 章',
@@ -360,7 +361,8 @@ def pic03():
 # pic04 分诊台与折纸
 # --------------------------------------------------------------------------
 def pic04():
-    import math, random
+    import math
+    import random
     s = [paper()]
     s.append(header(
         'ACT 4 · 西瓜书第 4 / 5 章',
@@ -420,7 +422,7 @@ def pic04():
 # pic05 双黄线与颠铁锅
 # --------------------------------------------------------------------------
 def pic05():
-    import random, math
+    import math
     s = [paper()]
     s.append(header(
         'ACT 5 · 西瓜书第 6 章',
@@ -475,7 +477,8 @@ def pic05():
 # pic06 评委团与木匠
 # --------------------------------------------------------------------------
 def pic06():
-    import random, math
+    import math
+    import random
     s = [paper()]
     s.append(header(
         'ACT 6 · 西瓜书第 8 章',
@@ -639,7 +642,7 @@ if __name__ == '__main__':
     import sys
     nums = [int(a) for a in sys.argv[1:]] or list(BUILDERS)
     for n in nums:
-        svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" font-family="sans-serif">' + BUILDERS[n]() 
+        svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" font-family="sans-serif">' + BUILDERS[n]()
         out = os.path.join(ASSETS, f'pic{n:02d}-new.svg')
         with open(out, 'w', encoding='utf-8') as f:
             f.write(svg)

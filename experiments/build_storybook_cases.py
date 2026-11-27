@@ -24,7 +24,7 @@ plt.rcParams['grid.color'] = '#E2E8F0'
 plt.rcParams['grid.linestyle'] = '--'
 plt.rcParams['grid.alpha'] = 0.8
 
-ROOT = r'C:\Users\34684\Documents\notes-for-deep-learniung'
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 ASSETS = os.path.join(ROOT, 'assets')
 NB_DIR = os.path.join(ROOT, 'notebooks')
 os.makedirs(ASSETS, exist_ok=True)
@@ -63,7 +63,8 @@ def make_executed_cell(code_str, stdout_text=None, png_b64=None, exec_count=1):
 def build_case01():
     np.random.seed(42)
     # 真实挑瓜规律：敲声频率 x in [-1, 1] -> 甜度 y
-    true_fn = lambda x: np.sin(1.5 * np.pi * x) + 0.3 * x
+    def true_fn(x):
+        return np.sin(1.5 * np.pi * x) + 0.3 * x
     N = 15
     x_train = np.linspace(-0.95, 0.95, N)
     y_train = true_fn(x_train) + np.random.normal(0, 0.22, size=N)
@@ -108,7 +109,7 @@ def build_case01():
     y_test_true = true_fn(x_test)
     for d in degrees_bv:
         preds = []
-        for trial in range(60):
+        for _ in range(60):
             y_sample = true_fn(x_train) + np.random.normal(0, 0.22, size=N)
             p, _ = fit_legendre_min_norm(x_train, y_sample, x_test, d)
             preds.append(np.clip(p, -5, 5))
@@ -135,9 +136,6 @@ def build_case01():
     ax = axes[2]
     P_list = [2, 4, 6, 9, 12, 14, 15, 16, 18, 22, 30, 45, 70, 110]
     train_errs, test_errs = [], []
-    np.random.seed(7)
-    W_pool = np.random.randn(1, 120) * 2.2
-    b_pool = np.random.uniform(0, 2 * np.pi, size=(1, 120))
     for P in P_list:
         tr_e, te_e = [], []
         for trial in range(40):
@@ -224,7 +222,7 @@ def build_case02():
     theta_l2, theta_l1 = 3.8, 3.8
     lr = 0.35
     traj_l2, traj_l1 = [theta_l2], [theta_l1]
-    for step in range(18):
+    for _ in range(18):
         theta_l2 = theta_l2 - lr * theta_l2                # d(0.5*theta^2)/dtheta = theta
         theta_l1 = theta_l1 - lr * np.sign(theta_l1)       # d(|theta|)/dtheta = sign(theta)
         traj_l2.append(theta_l2)
@@ -356,7 +354,7 @@ def build_case03():
     y_col = y[:, None].astype(float)
 
     lr = 0.08
-    for epoch in range(900):
+    for _ in range(900):
         # 前向传播：2维原空间 -> 16维折痕展开 -> 2维瓶颈特征空间 Z2 -> 逻辑回归输出
         Z1 = X @ W1 + b1
         A1 = np.maximum(0, Z1)
@@ -376,9 +374,12 @@ def build_case03():
         dZ1 = dA1 * (Z1 > 0)
         dW1 = X.T @ dZ1
         db1 = np.sum(dZ1, axis=0, keepdims=True)
-        W1 -= lr * dW1; b1 -= lr * db1
-        W2 -= lr * dW2; b2 -= lr * db2
-        W3 -= lr * dW3; b3 -= lr * db3
+        W1 -= lr * dW1
+        b1 -= lr * db1
+        W2 -= lr * dW2
+        b2 -= lr * db2
+        W3 -= lr * dW3
+        b3 -= lr * db3
 
     # 网格预测对比
     gx, gy = np.meshgrid(np.linspace(-1.4, 2.3, 140), np.linspace(-0.9, 1.4, 140))
@@ -509,9 +510,11 @@ def build_case04():
     ax1.plot(xx, yy_sv, color='#16A34A', ls='--', lw=2.2, label=f'删掉 {50-np.sum(sv_mask)} 个瓜后重训 (完全重合!)')
     ax1.plot(xx, yy_up, 'k:', lw=1.2)
     ax1.plot(xx, yy_dn, 'k:', lw=1.2)
-    ax1.set_xlim(-2.8, 2.8); ax1.set_ylim(-2.8, 2.8)
+    ax1.set_xlim(-2.8, 2.8)
+    ax1.set_ylim(-2.8, 2.8)
     ax1.set_title('① KKT 稀疏定理：删掉 94% 内部点边界不动', fontsize=11, fontweight='bold')
-    ax1.set_xlabel('特征 x1'); ax1.set_ylabel('特征 x2')
+    ax1.set_xlabel('特征 x1')
+    ax1.set_ylabel('特征 x2')
     ax1.legend(fontsize=7.6, loc='lower right')
     ax1.grid(True)
 
@@ -522,9 +525,11 @@ def build_case04():
     ax2.plot(0.85 * np.cos(th), 0.85 * np.sin(th), color='#15803D', lw=2.5, label='核 SVM 投影回 2D 的环形分界线')
     ax2.scatter(X_in[:, 0], X_in[:, 1], c='#2563EB', s=28, label='内圈核心好瓜 (y=+1)')
     ax2.scatter(X_out[:, 0], X_out[:, 1], c='#DC2626', s=28, label='外圈包围坏瓜 (y=-1)')
-    ax2.set_xlim(-1.75, 1.75); ax2.set_ylim(-1.75, 1.75)
+    ax2.set_xlim(-1.75, 1.75)
+    ax2.set_ylim(-1.75, 1.75)
     ax2.set_title('② 二维死局：任何一条直线都切不开同心圆', fontsize=11, fontweight='bold')
-    ax2.set_xlabel('特征 x1'); ax2.set_ylabel('特征 x2')
+    ax2.set_xlabel('特征 x1')
+    ax2.set_ylabel('特征 x2')
     ax2.legend(fontsize=8, loc='upper right')
     ax2.grid(True)
 
@@ -539,7 +544,9 @@ def build_case04():
     ax3.plot_surface(px, py, pz, color='#16A34A', alpha=0.28)
     ax3.view_init(elev=22, azim=35)
     ax3.set_title('③ 升维魔法 z=x1²+x2²：三维水平面一刀切开！', fontsize=11, fontweight='bold')
-    ax3.set_xlabel('x1'); ax3.set_ylabel('x2'); ax3.set_zlabel('z=||x||²')
+    ax3.set_xlabel('x1')
+    ax3.set_ylabel('x2')
+    ax3.set_zlabel('z=||x||²')
     ax3.legend(fontsize=8, loc='upper left')
 
     fig.tight_layout()
@@ -561,7 +568,8 @@ def build_case05():
     np.random.seed(42)
     N = 70
     x = np.sort(np.random.uniform(0, 6.0, N))
-    y_true_f = lambda t: np.sin(t) + 0.5 * np.cos(2.5 * t)
+    def y_true_f(t):
+        return np.sin(t) + 0.5 * np.cos(2.5 * t)
     y = y_true_f(x) + np.random.normal(0, 0.28, N)
     x_grid = np.linspace(0, 6.0, 250)
     y_grid_true = y_true_f(x_grid)
@@ -587,14 +595,15 @@ def build_case05():
 
     def pred_reg_tree(node, x_arr):
         def _one(n, v):
-            if n['leaf']: return n['val']
+            if n['leaf']:
+                return n['val']
             return _one(n['left'], v) if v <= n['thr'] else _one(n['right'], v)
         return np.array([_one(node, v) for v in x_arr])
 
     # 1) Bagging: 30 棵高方差深树 (max_depth=6) 自助采样并联平均
     T_bag = 30
     bag_preds = []
-    for t in range(T_bag):
+    for _ in range(T_bag):
         idx = np.random.choice(N, size=N, replace=True)
         tree_t = fit_reg_tree(x[idx], y[idx], max_depth=6, min_leaf=2)
         bag_preds.append(pred_reg_tree(tree_t, x_grid))
@@ -628,7 +637,8 @@ def build_case05():
     ax.plot(x_grid, bag_preds.mean(axis=0), color='#1D4ED8', lw=2.8, label=f'30 棵深树 Bagging 平均 (MSE 降 {(1-ens_bag_mse/single_deep_mse)*100:.0f}%!)')
     ax.scatter(x, y, c='#64748B', s=18, alpha=0.6)
     ax.set_title('① Bagging 并联：30 条锯齿抵消成丝滑曲线', fontsize=11, fontweight='bold')
-    ax.set_xlabel('x'); ax.set_ylabel('预测值 H(x)')
+    ax.set_xlabel('x')
+    ax.set_ylabel('预测值 H(x)')
     ax.legend(fontsize=7.8, loc='lower left')
     ax.grid(True)
 
@@ -655,7 +665,8 @@ def build_case05():
     ax.plot(x_grid, gb_snapshots[20], color='#15803D', lw=2.6, label='第 20 轮接力 (函数空间梯度下降收敛!)')
     ax.scatter(x, y, c='#64748B', s=18, alpha=0.5)
     ax.set_title('③ GBDT 串联：每棵新树专门拟合上一轮残差', fontsize=11, fontweight='bold')
-    ax.set_xlabel('x'); ax.set_ylabel('累加预测 H_m(x)')
+    ax.set_xlabel('x')
+    ax.set_ylabel('累加预测 H_m(x)')
     ax.legend(fontsize=7.8, loc='lower left')
     ax.grid(True)
 
@@ -701,7 +712,7 @@ def build_case06():
     sig_k = np.array([np.eye(2) * 1.5, np.eye(2) * 1.5])
     log_liks = []
 
-    for step in range(22):
+    for _ in range(22):
         # E 步：计算后验责任 γ_{ik} = P(z_i=k | x_i, θ^{(t)})
         p0 = pi_k[0] * multivariate_normal.pdf(X, mu_k[0], sig_k[0])
         p1 = pi_k[1] * multivariate_normal.pdf(X, mu_k[1], sig_k[1])
@@ -733,7 +744,8 @@ def build_case06():
     ax.scatter(X[lbl_km == 1, 0], X[lbl_km == 1, 1], c='#DC2626', s=24, alpha=0.8, label='K-Means 判为簇 2')
     ax.scatter(c_km[:, 0], c_km[:, 1], c='#0F172A', marker='X', s=160, zorder=6, label='K-Means 质心 (等距硬切)')
     ax.set_title(f'① K-Means 翻车 (准确率仅 {acc_km:.1f}%): 拦腰斩断细长瓜堆', fontsize=11, fontweight='bold')
-    ax.set_xlabel('x1'); ax.set_ylabel('x2')
+    ax.set_xlabel('x1')
+    ax.set_ylabel('x2')
     ax.legend(fontsize=8, loc='lower left')
     ax.grid(True)
 
@@ -748,7 +760,8 @@ def build_case06():
     ax.contour(gx, gy, z0, levels=3, colors='#1D4ED8', linewidths=1.6)
     ax.contour(gx, gy, z1, levels=3, colors='#15803D', linewidths=1.6)
     ax.set_title(f'② EM-GMM 软聚类 (准确率 {acc_gmm:.1f}%): 精准拟合倾斜协方差', fontsize=11, fontweight='bold')
-    ax.set_xlabel('x1'); ax.set_ylabel('x2')
+    ax.set_xlabel('x1')
+    ax.set_ylabel('x2')
     ax.legend(fontsize=8, loc='lower left')
     ax.grid(True)
 
@@ -1124,7 +1137,7 @@ print(f"[反向追责] 一次 backward() 算出全部梯度: dL/dw1 = {w1.grad:.
         exec(autograd_code, ns)
     autograd_stdout = buf_io.getvalue()
 
-    save_nb('06_盲人摸象与回声追责_EM软聚类与手搓Autograd引擎.ipynb', [
+    save_nb('06_盲人摸象的搭桥术_EM聚类与手搓自动求导引擎.ipynb', [
         new_markdown_cell("""# 第六回：盲人摸象的搭桥攀岩术（EM 与 GMM）& 一亿旋钮的回声追责（手搓 Autograd 引擎）
 
 > **对应《西瓜书》章节**：第 7 章（7.6 EM 算法）+ 第 9 章《聚类》（K-Means vs. 高斯混合聚类 GMM）+ 第 5 章（5.3 误差逆传播 BP 算法）
